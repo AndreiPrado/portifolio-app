@@ -1,0 +1,10 @@
+header {
+    .open-overlay {
+      @apply absolute right-5 top-3 w-10 h-10 flex flex-col justify-center cursor-pointer;
+  
+      span {
+        @apply block bg-white w-full mt-3;
+        height: 1px;
+      }
+    }
+  }

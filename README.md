@@ -1,8 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Space-Themed Portfolio Application
+
+![Space Portfolio](https://via.placeholder.com/800x400?text=Space+Portfolio)
+
+## Project Overview
+
+This is a modern, responsive portfolio website with a space-inspired design theme built using Next.js, React, and Tailwind CSS. The application features smooth parallax effects, animated star backgrounds, and a clean, professional UI designed to showcase developer projects and experience.
+
+## Features
+
+- 🚀 **Space Theme**: Custom dark color scheme with space-inspired visuals and animations
+- ✨ **Star Background Animation**: Dynamic animated starfield that adjusts to the browser window
+- 📱 **Fully Responsive**: Optimized for all device sizes from mobile to desktop
+- 🔄 **Parallax Effects**: Smooth scrolling parallax sections for enhanced visual depth
+- 🧩 **Component-Based Architecture**: Modular, reusable components for consistent styling
+- 📝 **Content-Rich Pages**: Dedicated sections for projects, experience, about, and contact
+- 🌗 **Custom UI Components**: Project cards, experience timeline, and contact form
+
+## Tech Stack
+
+- **Framework**: [Next.js 15.0.3](https://nextjs.org/) with App Router
+- **UI Library**: [React 19.0.0](https://react.dev/) (Release Candidate)
+- **Styling**: [Tailwind CSS 3.4.1](https://tailwindcss.com/)
+- **TypeScript**: Type-safe development
+- **Animations**: Custom CSS animations and component-based effects
+- **Build Tool**: Turbopack
+
+## Project Structure
+
+```
+portifolio-app/
+├── public/             # Static assets
+├── src/
+│   ├── app/           # App Router pages and layout
+│   │   ├── components/  # Reusable UI components
+│   │   │   ├── ExperienceCard.tsx
+│   │   │   ├── ParallaxSection.tsx
+│   │   │   ├── ProjectCard.tsx
+│   │   │   ├── StarBackground.tsx
+│   │   │   └── ... 
+│   │   ├── contato/      # Contact page
+│   │   ├── experiencia/  # Experience page
+│   │   ├── projetos/     # Projects page
+│   │   ├── sobre/        # About page
+│   │   ├── fonts/        # Custom font config
+│   │   ├── globals.css   # Global styles
+│   │   ├── layout.tsx    # Root layout
+│   │   └── page.tsx      # Home page
+├── tailwind.config.ts   # Tailwind CSS configuration
+├── next.config.js       # Next.js configuration
+├── tsconfig.json        # TypeScript configuration
+└── package.json         # Project dependencies
+```
+
+## Key Components
+
+### StarBackground
+
+Creates an animated starfield canvas that fills the background of the application, with twinkling stars that respond to browser resize events.
+
+### ParallaxSection
+
+Provides depth through parallax scrolling effects. Sections move at different speeds when scrolling to create an immersive experience.
+
+### ProjectCard & ExperienceCard
+
+Standardized components for displaying project details and work experience with consistent styling.
+
+## Pages
+
+- **Home**: Landing page with hero section and introduction
+- **About**: Personal information and background
+- **Experience**: Work history and skills
+- **Projects**: Portfolio of completed projects with details
+- **Contact**: Contact form and information
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm, yarn, or pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone [repository-url]
+cd portifolio-app
+
+# Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### Development
 
 ```bash
 npm run dev
@@ -10,27 +104,45 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Color Theme
 
-## Learn More
+The space theme colors are defined in `tailwind.config.ts` and can be adjusted to match your preferences.
 
-To learn more about Next.js, take a look at the following resources:
+### Content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Update the content in the page files to personalize with your information:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app/page.tsx`: Home page content
+- `src/app/sobre/page.tsx`: About page content
+- `src/app/experiencia/page.tsx`: Experience details
+- `src/app/projetos/page.tsx`: Project showcases
+- `src/app/contato/page.tsx`: Contact information
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is optimized for deployment on [Vercel](https://vercel.com), but can be deployed to any platform that supports Next.js applications.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Build for production
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
+
+## License
+
+This project is open-source and available under the MIT License.
+
+## Acknowledgements
+
+- Next.js team for the excellent framework
+- Tailwind CSS for the utility-first CSS framework
+- React team for the UI library
