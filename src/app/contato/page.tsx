@@ -1,25 +1,32 @@
-import Link from 'next/link';
-
 export default function Contato() {
   return (
     <div className="container mx-auto px-4 py-16">
       {/* Hero Section */}
-      <section className="py-16 relative">
+      <section className="py-16 relative overflow-hidden">
+        {/* Elementos decorativos estáticos */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        {/* Conteúdo estático */}
         <div className="relative z-10">
           <h1 className="heading-lg text-center mb-6 text-gradient">Contato</h1>
           <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
             Entre em contato para conversarmos sobre seu projeto ou oportunidades de trabalho.
           </p>
         </div>
-        
-        {/* Background decorations */}
-        <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="mb-20 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="mb-20 relative overflow-hidden">
+        {/* Elementos decorativos estáticos */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 left-20 w-72 h-72 bg-purple-500/5 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
             <h2 className="heading-md mb-8 text-white">Envie uma mensagem</h2>
@@ -30,8 +37,9 @@ export default function Contato() {
                 <input 
                   type="text" 
                   id="name" 
-                  className="w-full px-4 py-3 rounded-lg bg-space-blue border border-gray-700 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/50 transition duration-200"
-                  placeholder="Seu nome completo"
+                  name="name"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
+                  placeholder="Seu nome"
                 />
               </div>
               
@@ -40,18 +48,9 @@ export default function Contato() {
                 <input 
                   type="email" 
                   id="email" 
-                  className="w-full px-4 py-3 rounded-lg bg-space-blue border border-gray-700 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/50 transition duration-200"
-                  placeholder="seu@email.com"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-gray-200 mb-2">Assunto</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  className="w-full px-4 py-3 rounded-lg bg-space-blue border border-gray-700 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/50 transition duration-200"
-                  placeholder="Motivo do contato"
+                  name="email"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
+                  placeholder="seu.email@exemplo.com"
                 />
               </div>
               
@@ -59,18 +58,21 @@ export default function Contato() {
                 <label htmlFor="message" className="block text-gray-200 mb-2">Mensagem</label>
                 <textarea 
                   id="message" 
-                  rows={6}
-                  className="w-full px-4 py-3 rounded-lg bg-space-blue border border-gray-700 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/50 transition duration-200 resize-none"
-                  placeholder="Descreva sua proposta ou como posso ajudar você..."
+                  name="message"
+                  rows={5}
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
+                  placeholder="Escreva sua mensagem aqui..."
                 ></textarea>
               </div>
               
-              <button 
-                type="submit" 
-                className="button-primary w-full py-3 px-6 text-center"
-              >
-                Enviar mensagem
-              </button>
+              <div>
+                <button 
+                  type="submit" 
+                  className="button-primary w-full justify-center py-3"
+                >
+                  Enviar Mensagem
+                </button>
+              </div>
             </form>
           </div>
           
@@ -89,34 +91,51 @@ export default function Contato() {
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Email</h3>
                   <p className="text-gray-300 mb-1">Para propostas de trabalho:</p>
-                  <a href="mailto:contato@seudominio.com" className="text-purple-400 hover:text-purple-300 transition-colors">contato@seudominio.com</a>
+                  <a href="mailto:andrei.prado@hotmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">andrei.prado@hotmail.com</a>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-400">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">Telefone</h3>
-                  <p className="text-gray-300 mb-1">Disponível em horário comercial:</p>
-                  <a href="tel:+5511999999999" className="text-blue-400 hover:text-blue-300 transition-colors">+55 (11) 99999-9999</a>
+                  <h3 className="text-lg font-bold text-white mb-1">LinkedIn</h3>
+                  <p className="text-gray-300 mb-1">Meu perfil profissional:</p>
+                  <a href="https://www.linkedin.com/in/andrei-prado" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">linkedin.com/in/andrei-prado</a>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-400">
+                <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m16 12-4-4-4 4" />
+                    <path d="M12 16V8" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-1">Idiomas</h3>
+                  <p className="text-gray-300 mb-1">Português: Nativo</p>
+                  <p className="text-gray-300 mb-1">Inglês: Fluente Profissional</p>
+                  <p className="text-gray-300">Espanhol: Profissional</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400">
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Localização</h3>
-                  <p className="text-gray-300 mb-1">Disponível para trabalho remoto:</p>
-                  <p className="text-pink-400">São Paulo - SP, Brasil</p>
+                  <p className="text-gray-300">São Paulo, São Paulo, Brasil</p>
                 </div>
               </div>
             </div>

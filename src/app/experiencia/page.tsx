@@ -1,65 +1,70 @@
 import Link from 'next/link';
-import { ExperienceCard } from '../components/ExperienceCard';
+import ExperienceCard from '../components/ExperienceCard';
 
 export default function Experiencia() {
   return (
     <div className="container mx-auto px-4 py-16">
       {/* Hero Section */}
-      <section className="py-16 relative">
+      <section className="py-16 relative overflow-hidden">
+        {/* Elementos decorativos estáticos */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        {/* Conteúdo estático */}
         <div className="relative z-10">
           <h1 className="heading-lg text-center mb-6 text-gradient">Experiência Profissional</h1>
           <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
             Conheça minha trajetória e experiências profissionais na área de desenvolvimento.
           </p>
         </div>
-        
-        {/* Background decorations */}
-        <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
       </section>
 
       {/* Experience Timeline */}
-      <section className="mb-20 relative">
-        <div className="max-w-4xl mx-auto">
-          {/* Current Job */}
+      <section className="mb-20 relative overflow-hidden">
+        {/* Elementos decorativos estáticos */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 left-20 w-72 h-72 bg-purple-500/5 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        {/* Timeline */}
+        <div className="max-w-4xl mx-auto relative z-10">
+          {/* Accenture Brasil - RD Saúde */}
           <ExperienceCard
-            title="Desenvolvedor Full Stack Senior"
-            company="TechSpace"
-            period="2022 - Presente"
-            description="Lidero o desenvolvimento de aplicações web e mobile utilizando React, Next.js e Node.js. Responsável pela arquitetura de sistemas, implementação de CI/CD e mentoria de desenvolvedores júnior."
-            technologies={["React", "Next.js", "TypeScript", "Node.js", "MongoDB"]}
-            isCurrent={true}
+            title="Digital Business Integration Consultant / Technical Lead"
+            company="Accenture Brasil - RD Saúde"
+            period="Fevereiro 2021 - Presente"
+            description="Lidero todo o escopo técnico, desde o design de arquitetura até implantação em produção. Defino e implemento arquiteturas escaláveis e de alta performance. Gerencio infraestrutura na nuvem GCP e pipelines CI/CD no Azure DevOps. Desenvolvo tanto backend (Node.js, Fastify) quanto frontend (React.js). Integro APIs com GenAI (OpenAI, Gemini) para entregar soluções inteligentes. Apoio e mentoro desenvolvedores, desbloqueio tarefas e garanto a qualidade do código."
+            skills={["Node.js", "TypeScript", "Fastify", "React.js", "GCP", "Azure DevOps", "Docker"]}
+            isActive={true}
           />
-          
-          {/* Previous Job 1 */}
+
+          {/* Accenture Brasil - DirectvGo */}
           <ExperienceCard
-            title="Desenvolvedor Frontend"
-            company="WebSolutions"
-            period="2020 - 2022"
-            description="Desenvolvimento de interfaces modernas e responsivas para aplicações web. Implementação de features complexas utilizando React e Vue.js. Participação em projetos para grandes clientes do setor financeiro."
-            technologies={["React", "Vue.js", "Sass", "Redux", "GraphQL"]}
-            isCurrent={false}
+            title="Digital Business Integration Analyst"
+            company="Accenture Brasil - DirectvGo"
+            period="Janeiro 2018 - Janeiro 2021"
+            description="Atuei como desenvolvedor sênior e líder técnico no time de migração Vrio, responsável por todas as entregas do projeto. Estruturei a base de código e produzi documentação abrangente. Integrei APIs RESTful para permitir comunicação eficiente entre sistemas. No time Roku, liderei a aplicação para América Latina, garantindo estabilidade e qualidade de entrega. Gerenciei validação de código, releases e priorizei o roadmap de desenvolvimento com base nas necessidades do negócio."
+            skills={["TypeScript", "JavaScript", "jQuery", "RESTful APIs", "HTML/SASS", "BrightScript", "Git"]}
           />
-          
-          {/* Previous Job 2 */}
+
           <ExperienceCard
-            title="Desenvolvedor Web"
-            company="Digital Agency"
-            period="2018 - 2020"
-            description="Desenvolvimento de sites e landing pages para clientes de diversos setores. Implementação de sistemas de CMS e integração com APIs de pagamento e redes sociais."
-            technologies={["HTML/CSS", "JavaScript", "WordPress", "PHP", "MySQL"]}
-            isCurrent={false}
+            title="Web Developer"
+            company="Studio Visual"
+            period="Setembro 2015 - Dezembro 2017"
+            description="Desenvolvimento de websites e aplicações web com foco em front-end e back-end usando PHP, HTML, CSS e JavaScript. Criação e personalização de temas WordPress, desde a concepção até a entrega final. Implementação de interfaces amigáveis para facilitar o uso e gerenciamento de conteúdo na plataforma."
+            skills={["PHP", "WordPress", "JavaScript", "HTML/CSS"]}
           />
-          
-          {/* Internship */}
+
           <ExperienceCard
-            title="Estágio em Desenvolvimento Web"
-            company="StartupLab"
-            period="2017 - 2018"
-            description="Primeiro contato profissional com desenvolvimento web, participando da criação de funcionalidades para aplicativo mobile e website da empresa."
-            technologies={["JavaScript", "Angular", "Java", "Bootstrap"]}
-            isCurrent={false}
-          />
+            title="IT Support Technician"
+            company="Metrobyte"
+            period="Fevereiro 2014 - Setembro 2015"
+            description="Suporte técnico para clientes, resolvendo problemas de hardware e software em computadores e servidores. Manutenção e gerenciamento de sistemas de domínio em plataformas Windows, incluindo criação de usuários e gerenciamento de permissões. Configuração e aplicação de GPOs e gerenciamento de recursos para usuários em ambientes corporativos."
+            skills={["Windows Server", "Suporte Técnico", "Hardware", "Software", "GPO"]}
+          />          
         </div>
       </section>
       
@@ -128,10 +133,18 @@ export default function Experiencia() {
       </section>
       
       {/* CTA */}
-      <section className="text-center">
-        <Link href="/contato" className="button-primary">
-          Entre em contato
-        </Link>
+      <section className="py-16 text-center relative overflow-hidden">
+        {/* Elementos decorativos estáticos */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        {/* Conteúdo estático */}
+        <div className="relative z-10">
+          <Link href="/contato" className="button-primary">
+            Entre em contato
+          </Link>
+        </div>
       </section>
     </div>
   );

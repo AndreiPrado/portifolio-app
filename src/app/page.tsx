@@ -1,81 +1,98 @@
 import Link from "next/link";
+import ScrollReveal from "./components/ScrollReveal";
 
 export default function Home() {
   return (
     <div className="container mx-auto px-4">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex flex-col justify-center items-center text-center lg:text-left relative">
+      <section className="min-h-[90vh] flex flex-col justify-center items-center text-center lg:text-left relative overflow-hidden">
+        {/* Elementos decorativos estáticos */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 right-10 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+        </div>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
           <div className="lg:w-1/2">
-            <h1 className="heading-xl mb-6">
-              <span className="text-gradient">Desenvolvedor Web</span> com foco em
-              <span className="text-purple-500"> experiência</span> e
-              <span className="text-blue-500"> inovação</span>
-            </h1>
+            <ScrollReveal delay={100} direction="up" distance="30px">
+              <h1 className="heading-xl mb-6">
+                <span className="text-gradient">Software Engineer</span> com foco em
+                <span className="text-purple-500"> desenvolvimento web</span> e
+                <span className="text-blue-500"> liderança técnica</span>
+              </h1>
+            </ScrollReveal>
             
-            <p className="body-text text-gray-300 mb-8 max-w-2xl">
-              Olá! Sou um desenvolvedor web apaixonado por criar soluções digitais que combinam 
-              código limpo, design moderno e experiências intuitivas para os usuários.
-            </p>
+            <ScrollReveal delay={200} direction="up" distance="30px">
+              <p className="body-text text-gray-300 mb-8 max-w-2xl">
+                Olá! Sou Andrei Prado, desenvolvedor com experiência em tecnologias front-end e back-end.
+                Especializado em criar soluções web escaláveis e de alta performance, com foco em
+                TypeScript, React.js e Node.js.
+              </p>
+            </ScrollReveal>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/projetos" className="button-primary">
-                Ver Projetos
-              </Link>
-              <Link href="/contato" className="button-secondary">
-                Entre em Contato
-              </Link>
-            </div>
+            <ScrollReveal delay={300} direction="up" distance="30px">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/projetos" className="button-primary">
+                  Ver Projetos
+                </Link>
+                <Link href="/contato" className="button-secondary">
+                  Entre em Contato
+                </Link>
+              </div>
+            </ScrollReveal>
             
-            <div className="mt-12 flex items-center gap-8">
-              <div>
-                <h3 className="text-4xl font-bold text-white">5+</h3>
-                <p className="text-gray-400">Anos de Experiência</p>
+            <ScrollReveal delay={400} direction="up" distance="30px">
+              <div className="mt-12 flex items-center gap-8">
+                <div>
+                  <h3 className="text-4xl font-bold text-white">5+</h3>
+                  <p className="text-gray-400">Anos de Experiência</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-4xl font-bold text-white">4+</h3>
+                  <p className="text-gray-400">Projetos Liderados</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-4xl font-bold text-white">10+</h3>
+                  <p className="text-gray-400">Tecnologias Dominadas</p>
+                </div>
               </div>
-              
-              <div>
-                <h3 className="text-4xl font-bold text-white">50+</h3>
-                <p className="text-gray-400">Projetos Completos</p>
-              </div>
-              
-              <div>
-                <h3 className="text-4xl font-bold text-white">15+</h3>
-                <p className="text-gray-400">Tecnologias</p>
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
           
           <div className="lg:w-1/2 relative">
-            <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] animate-float">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-full blur-3xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div 
-                  className="w-[400px] h-[400px] animate-float flex items-center justify-center bg-gradient-to-br from-purple-500/30 via-blue-500/20 to-pink-500/30 rounded-full"
-                >
-                  <div className="relative w-[300px] h-[300px] flex items-center justify-center">
-                    {/* Capacete */}
-                    <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-b from-white/40 to-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center">
-                      {/* Viseira */}
-                      <div className="w-[140px] h-[100px] rounded-full bg-gradient-to-br from-blue-400/30 via-purple-500/20 to-pink-400/30 border border-white/20"></div>
+            <ScrollReveal delay={300} direction="right" distance="50px">
+              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] animate-float">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-full blur-3xl"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div 
+                    className="w-[400px] h-[400px] animate-float flex items-center justify-center bg-gradient-to-br from-purple-500/30 via-blue-500/20 to-pink-500/30 rounded-full"
+                  >
+                    <div className="relative w-[300px] h-[300px] flex items-center justify-center">
+                      {/* Capacete */}
+                      <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-b from-white/40 to-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center">
+                        {/* Viseira */}
+                        <div className="w-[140px] h-[100px] rounded-full bg-gradient-to-br from-blue-400/30 via-purple-500/20 to-pink-400/30 border border-white/20"></div>
+                      </div>
+                      
+                      {/* Corpo */}
+                      <div className="absolute top-[120px] w-[160px] h-[180px] bg-gradient-to-b from-white/30 to-gray-500/30 rounded-2xl border border-white/20">
+                        {/* Mochila */}
+                        <div className="absolute top-[20px] left-[10px] w-[140px] h-[80px] bg-gray-800/40 rounded-lg border border-gray-600/30"></div>
+                      </div>
+                      
+                      {/* Braços */}
+                      <div className="absolute top-[140px] left-[10px] w-[30px] h-[100px] bg-white/20 rounded-full border border-white/10 rotate-[-20deg]"></div>
+                      <div className="absolute top-[140px] right-[10px] w-[30px] h-[100px] bg-white/20 rounded-full border border-white/10 rotate-[20deg]"></div>
                     </div>
-                    
-                    {/* Corpo */}
-                    <div className="absolute top-[120px] w-[160px] h-[180px] bg-gradient-to-b from-white/30 to-gray-500/30 rounded-2xl border border-white/20">
-                      {/* Mochila */}
-                      <div className="absolute top-[20px] left-[10px] w-[140px] h-[80px] bg-gray-800/40 rounded-lg border border-gray-600/30"></div>
-                    </div>
-                    
-                    {/* Braços */}
-                    <div className="absolute top-[140px] left-[10px] w-[30px] h-[100px] bg-white/20 rounded-full border border-white/10 rotate-[-20deg]"></div>
-                    <div className="absolute top-[140px] right-[10px] w-[30px] h-[100px] bg-white/20 rounded-full border border-white/10 rotate-[20deg]"></div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Planetas decorativos */}
-            <div className="absolute top-12 -right-10 w-20 h-20 rounded-full bg-purple-500/20 animate-pulse-slow"></div>
-            <div className="absolute -bottom-10 left-12 w-16 h-16 rounded-full bg-blue-500/20 animate-pulse-slow"></div>
+              
+              {/* Planetas decorativos */}
+              <div className="absolute top-12 -right-10 w-20 h-20 rounded-full bg-purple-500/20 animate-pulse-slow"></div>
+              <div className="absolute -bottom-10 left-12 w-16 h-16 rounded-full bg-blue-500/20 animate-pulse-slow"></div>
+            </ScrollReveal>
           </div>
         </div>
         
@@ -100,43 +117,44 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Sobre Section */}
-      <section className="py-24 relative">
-        <div className="relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4 text-gradient">
-              Sobre Mim
-            </h2>
+      {/* Skills Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="text-center mb-16">
+          <ScrollReveal delay={200} direction="up" distance="40px">
+            <h2 className="heading-lg mb-6 text-gradient">Minhas Habilidades</h2>
             <p className="body-text text-gray-300 max-w-3xl mx-auto">
-              Conheça um pouco sobre minha trajetória e o que me motiva como desenvolvedor.
+              Especializado em desenvolvimento web com foco em front-end e arquitetura de soluções,
+              combinando liderança técnica com habilidades de desenvolvimento full-stack.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="heading-md mb-4 text-white">
-                Desenvolvedor <span className="text-purple-500">Full Stack</span> com paixão por interfaces modernas
-              </h3>
-              
-              <p className="body-text text-gray-300 mb-6">
-                Com mais de 5 anos de experiência no desenvolvimento web, tenho trabalhado com as tecnologias mais modernas do mercado para criar soluções eficientes e visualmente atraentes.
-              </p>
-              
-              <p className="body-text text-gray-300 mb-6">
-                Minha especialização é em React, Next.js e TypeScript para o frontend, e Node.js, Express e bancos de dados SQL/NoSQL para o backend. Tenho grande interesse em design de UX/UI e performance de aplicações.
-              </p>
-              
-              <p className="body-text text-gray-300 mb-8">
-                Além do desenvolvimento, gosto de compartilhar conhecimento através de artigos técnicos e mentorias para desenvolvedores iniciantes.
-              </p>
-              
+          </ScrollReveal>
+        </div>
+            
+        <div className="max-w-3xl mx-auto mb-16">
+          <ScrollReveal delay={250} direction="up" distance="30px">
+            <p className="body-text text-gray-300 mb-6">
+              Como desenvolvedor web, trabalho com tecnologias front-end como TypeScript, JavaScript, React.js, HTML, CSS e Bootstrap, criando interfaces responsivas e funcionais alinhadas com as necessidades dos clientes.
+            </p>
+                
+            <p className="body-text text-gray-300 mb-6">
+              Tenho experiência em liderar equipes técnicas, oferecer orientação, resolver desafios e garantir a qualidade e confiabilidade das entregas. Também contribuo ativamente para a criação de sistemas de design para padronização e otimização de projetos.
+            </p>
+                
+            <p className="body-text text-gray-300 mb-8">
+              Atualmente, trabalho com desenvolvimento full stack, incluindo back-end com Node.js e Fastify, e também com integrações de APIs de GenAI (OpenAI, Gemini) para oferecer soluções inteligentes.
+            </p>
+                
+            <div className="text-center">
               <Link href="/sobre" className="button-primary">
                 Conheça mais sobre mim
               </Link>
             </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="card p-6 hover:border-purple-500/50 transition-all duration-300">
+          </ScrollReveal>
+        </div>
+
+        <div className="mt-16">
+          <ScrollReveal delay={300} direction="right" distance="40px">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="card p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
                     <path d="m18 16 4-4-4-4"></path>
@@ -187,9 +205,9 @@ export default function Home() {
                 <p className="text-gray-300 text-sm">Docker, CI/CD, AWS, Git, GitHub Actions, Vercel</p>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
-
+        
         {/* Background decoration */}
         <div className="absolute top-1/2 left-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 right-12 w-96 h-96 bg-blue-500/5 rounded-full filter blur-3xl"></div>
@@ -198,18 +216,21 @@ export default function Home() {
       {/* Projetos Section */}
       <section className="py-24 relative">
         <div className="relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4 text-gradient">
-              Meus Projetos
-            </h2>
-            <p className="body-text text-gray-300 max-w-3xl mx-auto">
-              Conheça alguns dos trabalhos que desenvolvi recentemente.
-            </p>
-          </div>
+          <ScrollReveal delay={100} direction="up" distance="30px">
+            <div className="text-center mb-16">
+              <h2 className="heading-lg mb-4 text-gradient">
+                Meus Projetos
+              </h2>
+              <p className="body-text text-gray-300 max-w-3xl mx-auto">
+                Conheça alguns dos trabalhos que desenvolvi recentemente.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Projeto 1 */}
-            <div className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+            <ScrollReveal delay={200} direction="up" distance="30px">
+              <div className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
               <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-t-lg">
                   <div className="w-full h-full flex items-center justify-center text-white text-6xl font-bold opacity-30">P1</div>
@@ -246,9 +267,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Projeto 2 */}
-            <div className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+            <ScrollReveal delay={300} direction="up" distance="30px">
+              <div className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
               <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-pink-500/30 rounded-t-lg">
                   <div className="w-full h-full flex items-center justify-center text-white text-6xl font-bold opacity-30">P2</div>
@@ -285,9 +308,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Projeto 3 */}
-            <div className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+            <ScrollReveal delay={400} direction="up" distance="30px">
+              <div className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
               <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/30 to-yellow-500/30 rounded-t-lg">
                   <div className="w-full h-full flex items-center justify-center text-white text-6xl font-bold opacity-30">P3</div>
@@ -324,43 +349,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/projetos" className="button-primary">
-              Ver todos os projetos
-            </Link>
-          </div>
+          <ScrollReveal delay={500} direction="up" distance="30px">
+            <div className="text-center mt-12">
+              <Link href="/projetos" className="button-primary">
+                Ver todos os projetos
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
 
         {/* Background decoration */}
         <div className="absolute top-1/3 right-0 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-1/4 left-16 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="card max-w-4xl mx-auto p-8 md:p-12 bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30">
-          <div className="text-center">
-            <h2 className="heading-lg mb-4 text-white">Vamos trabalhar juntos?</h2>
-            <p className="body-text text-gray-300 mb-8 max-w-2xl mx-auto">
-              Estou disponível para novos projetos e colaborações. Se você tem um projeto em mente ou precisa de um desenvolvedor para sua equipe, entre em contato!              
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contato" className="button-primary">
-                Entre em contato
-              </Link>
-              <Link href="/sobre" className="button-secondary">
-                Saiba mais sobre mim
-              </Link>
-            </div>
-          </div>
-          
-          {/* Decorative elements */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl"></div>
-          <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl"></div>
-        </div>
       </section>
     </div>
   );

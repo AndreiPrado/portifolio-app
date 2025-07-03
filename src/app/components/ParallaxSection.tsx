@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useRef, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 interface ParallaxSectionProps {
   children: ReactNode;
@@ -8,50 +9,29 @@ interface ParallaxSectionProps {
   className?: string;
 }
 
+/**
+ * ParallaxSection - Componente que aplica efeito de parallax usando react-scroll-parallax
+ * 
+ * @param children - Elementos a serem renderizados dentro do componente
+ * @param speed - Velocidade do efeito parallax (positivo move para baixo, negativo move para cima)
+ * @param className - Classes CSS adicionais
+ */
 export default function ParallaxSection({ 
   children, 
-  speed = 0.5, 
+  speed = 2, 
   className = "" 
 }: ParallaxSectionProps) {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [offset, setOffset] = useState(0);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-      
-      const { top } = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Calculate parallax offset when section comes into view
-      if (top < windowHeight && top > -windowHeight) {
-        const scrollPosition = window.scrollY;
-        const sectionPosition = scrollPosition + top;
-        const parallaxOffset = (scrollPosition - sectionPosition) * speed;
-        
-        setOffset(parallaxOffset);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial calculation
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [speed]);
+  // Convertemos a velocidade para se adequar à API do react-scroll-parallax
+  // O sinal é invertido já que a direção é diferente da nossa implementação anterior
+  const parallaxSpeed = speed * -10; 
   
   return (
-    <div className={`parallax-container ${className}`} ref={sectionRef}>
-      <div 
-        className="w-full h-full"
-        style={{ 
-          transform: `translateY(${offset}px)`,
-          transition: 'transform 0.1s cubic-bezier(0.33, 1, 0.68, 1)'
-        }}
-      >
-        {children}
-      </div>
-    </div>
+    <Parallax 
+      className={`relative ${className}`}
+      speed={parallaxSpeed}
+      style={{ isolation: 'isolate' }}
+    >
+      {children}
+    </Parallax>
   );
 }

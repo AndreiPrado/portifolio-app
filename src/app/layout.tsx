@@ -6,6 +6,7 @@ import "./components/header.css"
 import Header from "./components/header";
 import Footer from "./components/Footer";
 import StarBackground from "./components/StarBackground";
+import ParallaxProviderWrapper from "./components/ParallaxProviderWrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,12 +32,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <StarBackground />
-        <Header />
-        <main className="min-h-screen pt-24">
-          {children}
-        </main>
-        <Footer />
+        <ParallaxProviderWrapper>
+          <StarBackground />
+          <Header />
+          <main className="min-h-screen pt-24">
+            {children}
+          </main>
+          <Footer />
+        </ParallaxProviderWrapper>
       </body>
     </html>
   );
