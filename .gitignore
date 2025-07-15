@@ -38,3 +38,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Other files
+descrição analista - ingles.md
+descrição consultor_v2 - ingles.md
+Linkedin Profile.pdf
