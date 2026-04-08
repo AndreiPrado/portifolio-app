@@ -20,8 +20,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfólio Pessoal | Espaço",
-  description: "Portfólio pessoal com tema espacial, mostrando experiências profissionais, projetos e habilidades.",
+  title: "Portfólio Pessoal - Andrei Prado",
+  description: "Portfólio pessoal com o objetivo de mostrar experiências profissionais, projetos e habilidades.",
 };
 
 export default function RootLayout({
