@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This is a modern, responsive portfolio website with a space-inspired design theme built using Next.js, React, and Tailwind CSS. The application features smooth parallax effects, animated star backgrounds, and a clean, professional UI designed to showcase developer projects and experience.
+This is a modern, responsive portfolio website with a space-inspired design theme built using Next.js, React, and Tailwind CSS. The application features smooth parallax effects, animated star backgrounds, and a clean, professional UI designed to showcase the professional experience and technical expertise of Andrei Prado, a Technical Lead with 10+ years of experience in web development, cloud architecture, and team leadership.
 
 ## Features
 
@@ -18,7 +18,7 @@ This is a modern, responsive portfolio website with a space-inspired design them
 
 ## Tech Stack
 
-- **Framework**: [Next.js 15.0.3](https://nextjs.org/) with App Router
+- **Framework**: [Next.js 15.5.14](https://nextjs.org/) with App Router
 - **UI Library**: [React 19.0.0](https://react.dev/) (Release Candidate)
 - **Styling**: [Tailwind CSS 3.4.1](https://tailwindcss.com/)
 - **TypeScript**: Type-safe development

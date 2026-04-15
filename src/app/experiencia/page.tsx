@@ -11,7 +11,7 @@ export default function Experiencia() {
           <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
         </div>
-        
+
         {/* Conteúdo estático */}
         <div className="relative z-10">
           <h1 className="heading-lg text-center mb-6 text-gradient">Experiência Profissional</h1>
@@ -28,7 +28,7 @@ export default function Experiencia() {
           <div className="absolute top-1/3 left-20 w-72 h-72 bg-purple-500/5 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
         </div>
-        
+
         {/* Timeline */}
         <div className="max-w-4xl mx-auto relative z-10">
           {/* Accenture Brasil - RD Saúde */}
@@ -64,10 +64,10 @@ export default function Experiencia() {
             period="Fevereiro 2014 - Setembro 2015"
             description="Suporte técnico para clientes, resolvendo problemas de hardware e software em computadores e servidores. Manutenção e gerenciamento de sistemas de domínio em plataformas Windows, incluindo criação de usuários e gerenciamento de permissões. Configuração e aplicação de GPOs e gerenciamento de recursos para usuários em ambientes corporativos."
             skills={["Windows Server", "Suporte Técnico", "Hardware", "Software", "GPO"]}
-          />          
+          />
         </div>
       </section>
-      
+
       {/* Skills Section */}
       <section className="mb-16">
         <div className="text-center mb-12">
@@ -76,74 +76,78 @@ export default function Experiencia() {
             Tecnologias e linguagens com as quais tenho experiência.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {/* Frontend */}
           <div className="card p-6">
             <h3 className="text-lg font-bold text-white mb-4">Frontend</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">React / Next.js</li>
-              <li className="text-gray-300">Vue.js / Nuxt</li>
+              <li className="text-gray-300">JavaScript</li>
               <li className="text-gray-300">TypeScript</li>
-              <li className="text-gray-300">Tailwind CSS</li>
-              <li className="text-gray-300">SASS / CSS-in-JS</li>
-              <li className="text-gray-300">Redux / Context API</li>
+              <li className="text-gray-300">React.js</li>
+              <li className="text-gray-300">jQuery</li>
+              <li className="text-gray-300">HTML5</li>
+              <li className="text-gray-300">CSS / SASS</li>
+              <li className="text-gray-300">Bootstrap</li>
             </ul>
           </div>
-          
-          {/* Backend */}
+
+          {/* Backend & APIs */}
           <div className="card p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Backend</h3>
+            <h3 className="text-lg font-bold text-white mb-4">Backend & APIs</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">Node.js / Express</li>
-              <li className="text-gray-300">NestJS</li>
-              <li className="text-gray-300">Python / Django</li>
-              <li className="text-gray-300">GraphQL</li>
+              <li className="text-gray-300">Node.js</li>
+              <li className="text-gray-300">Fastify</li>
               <li className="text-gray-300">REST APIs</li>
-              <li className="text-gray-300">Serverless</li>
+              <li className="text-gray-300">PHP</li>
+              <li className="text-gray-300">BrightScript (Roku)</li>
             </ul>
           </div>
-          
-          {/* Databases */}
+
+          {/* Plataformas */}
           <div className="card p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Bancos de Dados</h3>
+            <h3 className="text-lg font-bold text-white mb-4">Plataformas</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">MongoDB</li>
-              <li className="text-gray-300">PostgreSQL</li>
-              <li className="text-gray-300">MySQL</li>
-              <li className="text-gray-300">Redis</li>
-              <li className="text-gray-300">Firebase</li>
-              <li className="text-gray-300">Supabase</li>
+              <li className="text-gray-300">Liferay</li>
+              <li className="text-gray-300">WordPress</li>
+              <li className="text-gray-300">Roku Platform</li>
+              <li className="text-gray-300">Streaming Services</li>
             </ul>
           </div>
-          
-          {/* DevOps */}
+
+          {/* DevOps & Cloud */}
           <div className="card p-6">
-            <h3 className="text-lg font-bold text-white mb-4">DevOps</h3>
+            <h3 className="text-lg font-bold text-white mb-4">DevOps & Cloud</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">Git / GitHub</li>
+              <li className="text-gray-300">GCP (Google Cloud)</li>
+              <li className="text-gray-300">Azure DevOps</li>
+              <li className="text-gray-300">CI/CD Pipelines</li>
               <li className="text-gray-300">Docker</li>
-              <li className="text-gray-300">CI/CD (GitHub Actions)</li>
-              <li className="text-gray-300">AWS / Vercel / Netlify</li>
-              <li className="text-gray-300">Monitoramento</li>
-              <li className="text-gray-300">Testing (Jest, Cypress)</li>
+              <li className="text-gray-300">Git</li>
+              <li className="text-gray-300">ESLint</li>
             </ul>
           </div>
         </div>
       </section>
-      
+
       {/* CTA */}
       <section className="py-16 text-center relative overflow-hidden">
         {/* Elementos decorativos estáticos */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full filter blur-3xl"></div>
         </div>
-        
+
         {/* Conteúdo estático */}
         <div className="relative z-10">
-          <Link href="/contato" className="button-primary">
-            Entre em contato
-          </Link>
+          <h3 className="text-2xl font-bold text-white mb-4 text-center">Precisa de um Technical Lead?</h3>
+          <p className="body-text text-gray-300 text-center mb-6 max-w-2xl mx-auto">
+            Vamos conversar sobre como posso ajudar seu time a entregar projetos escaláveis e de alta qualidade.
+          </p>
+          <div className="flex justify-center">
+            <Link href="/contato" className="button-primary">
+              Vamos conversar
+            </Link>
+          </div>
         </div>
       </section>
     </div>

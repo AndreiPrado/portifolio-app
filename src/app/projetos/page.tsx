@@ -15,13 +15,17 @@ export default function Projetos() {
             <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
           </DirectionalParallax>
         </div>
-        
+
         {/* Conteúdo estático */}
         <div className="relative z-10">
           <DirectionalParallax speed={3}>
             <h1 className="heading-lg text-center mb-6 text-gradient">Meus Projetos</h1>
-            <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
-              Uma seleção dos meus projetos mais recentes e relevantes.
+            <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-4">
+              Ao longo de 10+ anos de carreira, participei de diversos projetos enterprise, desde sistemas de design
+              e plataformas de streaming até soluções de IA e cloud. Abaixo alguns exemplos de domínios em que atuo.
+            </p>
+            <p className="body-text text-gray-400 text-center max-w-2xl mx-auto mb-12 text-sm">
+              Nota: Muitos projetos são confidenciais ou propriedade de clientes. Entre em contato para discutir casos específicos.
             </p>
           </DirectionalParallax>
         </div>
@@ -36,7 +40,7 @@ export default function Projetos() {
             <div className="absolute top-1/2 right-0 w-80 h-80 bg-purple-500/5 rounded-full filter blur-3xl"></div>
           </ParallaxSection>
         </div>
-        
+
         {/* Conteúdo dos projetos */}
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Projeto 1 */}
@@ -50,7 +54,7 @@ export default function Projetos() {
               githubUrl="#"
             />
           </DirectionalParallax>
-          
+
           {/* Projeto 2 */}
           <DirectionalParallax speed={7}>
             <ProjectCard
@@ -62,7 +66,7 @@ export default function Projetos() {
               githubUrl="#"
             />
           </DirectionalParallax>
-          
+
           {/* Projeto 3 */}
           <DirectionalParallax speed={6}>
             <ProjectCard
@@ -74,7 +78,7 @@ export default function Projetos() {
               githubUrl="#"
             />
           </DirectionalParallax>
-          
+
           {/* Projeto 4 */}
           <DirectionalParallax speed={4}>
             <ProjectCard
@@ -86,7 +90,7 @@ export default function Projetos() {
               githubUrl="#"
             />
           </DirectionalParallax>
-          
+
           {/* Projeto 5 */}
           <DirectionalParallax speed={8}>
             <ProjectCard
@@ -98,7 +102,7 @@ export default function Projetos() {
               githubUrl="#"
             />
           </DirectionalParallax>
-          
+
           {/* Projeto 6 */}
           <DirectionalParallax speed={5}>
             <ProjectCard
@@ -112,70 +116,8 @@ export default function Projetos() {
           </DirectionalParallax>
         </div>
       </section>
-      
-      {/* Open Source Section */}
-      <section className="mb-20 relative overflow-hidden">
-        {/* Elementos decorativos com parallax */}
-        <div className="absolute inset-0 pointer-events-none">
-          <ParallaxSection speed={0.2}>
-            <div className="absolute top-1/3 left-20 w-72 h-72 bg-purple-500/5 rounded-full filter blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
-          </ParallaxSection>
-        </div>
-        
-        {/* Conteúdo estático */}
-        <div className="relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="heading-md mb-4 text-white">Projetos Open Source</h2>
-            <p className="body-text text-gray-300 max-w-3xl mx-auto">
-              Contribuições para a comunidade de desenvolvedores.
-            </p>
-          </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Open Source 1 */}
-          <div className="card p-6 flex flex-col h-full">
-            <h3 className="text-xl font-bold text-white mb-2">React Constellation</h3>
-            <p className="text-gray-300 mb-4 flex-grow">
-              Uma biblioteca de componentes React para criar visualizações interativas em estilo de constelação. Ideal para apresentações de dados relacionados e gráficos de nós.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-3 py-1 text-xs bg-purple-900/30 text-purple-200 rounded-full">React</span>
-              <span className="px-3 py-1 text-xs bg-purple-900/30 text-purple-200 rounded-full">D3.js</span>
-              <span className="px-3 py-1 text-xs bg-purple-900/30 text-purple-200 rounded-full">npm package</span>
-            </div>
-            <a href="#" className="button-secondary inline-flex items-center gap-2 self-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-              Ver no GitHub
-            </a>
-          </div>
-          
-          {/* Open Source 2 */}
-          <div className="card p-6 flex flex-col h-full">
-            <h3 className="text-xl font-bold text-white mb-2">NextJS Space Theme</h3>
-            <p className="text-gray-300 mb-4 flex-grow">
-              Um tema de código aberto para Next.js com design inspirado no espaço, incluindo animações de estrelas, efeitos de parallax e componentes reutilizáveis.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-3 py-1 text-xs bg-purple-900/30 text-purple-200 rounded-full">Next.js</span>
-              <span className="px-3 py-1 text-xs bg-purple-900/30 text-purple-200 rounded-full">Tailwind CSS</span>
-              <span className="px-3 py-1 text-xs bg-purple-900/30 text-purple-200 rounded-full">Framer Motion</span>
-            </div>
-            <a href="#" className="button-secondary inline-flex items-center gap-2 self-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-              Ver no GitHub
-            </a>
-          </div>
-        </div>
-        </div>
-      </section>
-      
+
+
       {/* CTA */}
       <section className="py-16 text-center relative overflow-hidden">
         {/* Elementos decorativos com parallax */}
@@ -184,12 +126,18 @@ export default function Projetos() {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full filter blur-3xl"></div>
           </ParallaxSection>
         </div>
-        
+
         {/* Conteúdo estático */}
         <div className="relative z-10">
-          <Link href="/contato" className="button-primary">
-            Entre em contato
-          </Link>
+          <h3 className="text-2xl font-bold text-white mb-4 text-center">Tem um projeto em mente?</h3>
+          <p className="body-text text-gray-300 text-center mb-6 max-w-2xl mx-auto">
+            Vamos discutir como posso ajudar a transformar sua ideia em realidade com arquitetura sólida e tecnologias modernas.
+          </p>
+          <div className="flex justify-center">
+            <Link href="/contato" className="button-primary">
+              Iniciar conversa
+            </Link>
+          </div>
         </div>
       </section>
     </div>
