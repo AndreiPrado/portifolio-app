@@ -1,6 +1,6 @@
 # Space-Themed Portfolio Application
 
-![Space Portfolio](https://via.placeholder.com/800x400?text=Space+Portfolio)
+![Space Portfolio](https://placehold.co/800x400?text=Space+Portfolio)
 
 ## Project Overview
 

@@ -20,8 +20,22 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfólio Pessoal - Andrei Prado",
-  description: "Portfólio pessoal com o objetivo de mostrar experiências profissionais, projetos e habilidades.",
+  title: "Andrei Prado — Tech Lead & Full Stack Software Engineer",
+  description:
+    "Personal portfolio of Andrei Prado, Tech Lead and Full Stack Software Engineer focused on Node.js, React, TypeScript, GCP and GenAI solutions.",
+  keywords: [
+    "Andrei Prado",
+    "Tech Lead",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Node.js",
+    "React",
+    "TypeScript",
+    "GCP",
+    "GenAI",
+    "Cloud Architecture",
+    "Technical Leadership",
+  ],
 };
 
 export default function RootLayout({
@@ -30,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ParallaxProviderWrapper>
           <StarBackground />
