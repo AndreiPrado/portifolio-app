@@ -84,7 +84,7 @@ export default function Projects() {
         <div className="relative z-10">
           <h3 className="text-2xl font-bold text-white mb-4">Have a project in mind?</h3>
           <p className="body-text text-gray-300 mb-6 max-w-2xl mx-auto">
-            Let's talk about how I can help turn your idea into a well-architected, production-ready solution.
+            Let&apos;s talk about how I can help turn your idea into a well-architected, production-ready solution.
           </p>
           <div className="flex justify-center">
             <Link href="/contato" className="button-primary">

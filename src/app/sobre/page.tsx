@@ -175,7 +175,7 @@ export default function About() {
       {/* CTA */}
       <section className="text-center mb-16">
         <div className="card p-8 max-w-3xl mx-auto">
-          <h2 className="heading-md mb-4">Let's work together</h2>
+          <h2 className="heading-md mb-4">Let&apos;s work together</h2>
           <p className="body-text text-gray-300 mb-8">
             Open to conversations about technical leadership, full stack engineering, cloud solutions and remote opportunities.
           </p>
