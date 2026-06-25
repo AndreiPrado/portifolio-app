@@ -126,7 +126,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* GitHub placeholder */}
+              {/* GitHub */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400">
@@ -135,8 +135,37 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">GitHub</h3>
-                  <p className="text-gray-400 text-sm italic">Coming soon</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{contact.info.github.label}</h3>
+                  <p className="text-gray-300 mb-1">{contact.info.github.description}</p>
+                  <a
+                    href={contact.info.github.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                  >
+                    {contact.info.github.value}
+                  </a>
+                </div>
+              </div>
+
+              {/* WhatsApp */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-1">{contact.info.whatsapp.label}</h3>
+                  <p className="text-gray-300 mb-1">{contact.info.whatsapp.description}</p>
+                  <a
+                    href={contact.info.whatsapp.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                  >
+                    {contact.info.whatsapp.value}
+                  </a>
                 </div>
               </div>
 
@@ -173,37 +202,37 @@ export default function Contact() {
                   LinkedIn
                 </a>
 
-                <span className="button-secondary flex items-center gap-2 opacity-40 cursor-not-allowed">
+                <a
+                  href="https://github.com/AndreiPrado"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-secondary flex items-center gap-2"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                     <path d="M9 18c-4.51 2-5-2-7-2" />
                   </svg>
-                  GitHub (coming soon)
-                </span>
+                  GitHub
+                </a>
+
+                <a
+                  href="https://wa.me/5511988564898"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-secondary flex items-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  WhatsApp
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="heading-md mb-4 text-white">FAQ</h2>
-          <p className="body-text text-gray-300 max-w-3xl mx-auto">
-            Common questions about my work and how I can help.
-          </p>
-        </div>
 
-        <div className="max-w-4xl mx-auto space-y-6">
-          {contact.faq.map((item) => (
-            <div key={item.question} className="card p-6">
-              <h3 className="text-lg font-bold text-white mb-2">{item.question}</h3>
-              <p className="text-gray-300">{item.answer}</p>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

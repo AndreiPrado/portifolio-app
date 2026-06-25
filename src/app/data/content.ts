@@ -91,6 +91,18 @@ export const siteContent = {
         value: "linkedin.com/in/andrei-prado",
         href: "https://www.linkedin.com/in/andrei-prado",
       },
+      github: {
+        label: "GitHub",
+        description: "Open source & personal projects:",
+        value: "github.com/AndreiPrado",
+        href: "https://github.com/AndreiPrado",
+      },
+      whatsapp: {
+        label: "WhatsApp",
+        description: "Quick messages:",
+        value: "+55 (11) 98856-4898",
+        href: "https://wa.me/5511988564898",
+      },
       location: {
         label: "Location",
         value: "São Paulo, Brazil — Open to remote",
