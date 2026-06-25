@@ -56,7 +56,7 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href="/cv.pdf"
+            href="/CV_Andrei_Prado.pdf"
             className="button-primary ml-4"
             target="_blank"
             rel="noopener noreferrer"
