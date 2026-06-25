@@ -29,9 +29,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-space-black/80 backdrop-blur-md py-3" : "bg-transparent py-5"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-space-black/80 backdrop-blur-md py-3" : "bg-transparent py-5"
+        }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
@@ -40,7 +39,7 @@ export default function Header() {
               <span className="text-white font-bold text-xl">A</span>
             </div>
             <span className="text-white font-bold text-xl">
-              Andrei<span className="text-purple-500">Prado</span>
+              Andrei <span className="text-purple-500">Prado</span>
             </span>
           </Link>
         </div>
@@ -79,9 +78,8 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-space-dark/95 backdrop-blur-md flex flex-col items-center justify-center z-40 transition-all duration-300 ${
-            isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+          className={`fixed inset-0 bg-space-dark/95 backdrop-blur-md flex flex-col items-center justify-center z-40 transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
         >
           <nav className="flex flex-col items-center gap-6 text-lg">
             {navLinks.map(({ href, label }) => (

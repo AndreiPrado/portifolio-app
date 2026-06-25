@@ -33,13 +33,13 @@ export default function About() {
           {/* Profile picture */}
           <div className="md:w-1/3">
             <div className="rounded-xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 p-1">
-              <div className="bg-space-black rounded-lg overflow-hidden aspect-square">
+              <div className="rounded-lg overflow-hidden aspect-square">
                 <Image
-                  src="/profile_picture.jpg"
+                  src="/profile_picture.jpeg"
                   alt="Andrei Prado"
                   width={500}
                   height={500}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   priority
                 />
               </div>

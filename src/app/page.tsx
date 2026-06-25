@@ -57,7 +57,7 @@ export default function Home() {
 
           <div className="lg:w-1/2 relative">
             <ScrollReveal delay={300} direction="right" distance="50px">
-              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] animate-float">
+              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] animate-float m-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-full blur-3xl"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-[400px] h-[400px] animate-float flex items-center justify-center bg-gradient-to-br from-purple-500/30 via-blue-500/20 to-pink-500/30 rounded-full">
