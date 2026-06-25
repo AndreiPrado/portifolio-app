@@ -1,7 +1,7 @@
 "use client";
 
-import { ReactNode } from 'react';
-import { Parallax } from 'react-scroll-parallax';
+import { ReactNode, useEffect, useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 interface ParallaxSectionProps {
   children: ReactNode;
@@ -9,27 +9,28 @@ interface ParallaxSectionProps {
   className?: string;
 }
 
-/**
- * ParallaxSection - Componente que aplica efeito de parallax usando react-scroll-parallax
- * 
- * @param children - Elementos a serem renderizados dentro do componente
- * @param speed - Velocidade do efeito parallax (positivo move para baixo, negativo move para cima)
- * @param className - Classes CSS adicionais
- */
-export default function ParallaxSection({ 
-  children, 
-  speed = 2, 
-  className = "" 
+export default function ParallaxSection({
+  children,
+  speed = 2,
+  className = "",
 }: ParallaxSectionProps) {
-  // Convertemos a velocidade para se adequar à API do react-scroll-parallax
-  // O sinal é invertido já que a direção é diferente da nossa implementação anterior
-  const parallaxSpeed = speed * -10; 
-  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const parallaxSpeed = speed * -10;
+
   return (
-    <Parallax 
+    <Parallax
       className={`relative ${className}`}
       speed={parallaxSpeed}
-      style={{ isolation: 'isolate' }}
+      disabled={isMobile}
+      style={{ isolation: "isolate" }}
     >
       {children}
     </Parallax>
