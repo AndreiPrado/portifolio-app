@@ -1,31 +1,42 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/sobre", label: "About" },
-  { href: "/experiencia", label: "Experience" },
-  { href: "/projetos", label: "Projects" },
-  { href: "/contato", label: "Contact" },
+const navHrefs = [
+  { href: "/" as const, key: "home" },
+  { href: "/about" as const, key: "about" },
+  { href: "/experience" as const, key: "experience" },
+  { href: "/projects" as const, key: "projects" },
+  { href: "/contact" as const, key: "contact" },
 ];
+
+const localeOptions = [
+  { locale: "en", flag: "🇺🇸", label: "English" },
+  { locale: "pt", flag: "🇧🇷", label: "Português" },
+  { locale: "es", flag: "🇪🇸", label: "Español" },
+] as const;
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
+  const router = useRouter();
+  const t = useTranslations("Nav");
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const switchLocale = (next: string) => {
+    router.replace(pathname, { locale: next });
+  };
 
   return (
     <header
@@ -33,6 +44,7 @@ export default function Header() {
         }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
+        {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
@@ -46,22 +58,38 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map(({ href, label }) => (
+          {navHrefs.map(({ href, key }) => (
             <Link
               key={href}
               href={href}
               className={pathname === href ? "nav-link-active" : "nav-link"}
             >
-              {label}
+              {t(key)}
             </Link>
           ))}
+
+          {/* Locale switcher */}
+          <div className="flex items-center gap-0.5 ml-2 border border-gray-700 rounded-full px-1 py-0.5">
+            {localeOptions.map(({ locale: loc, flag, label }) => (
+              <button
+                key={loc}
+                onClick={() => switchLocale(loc)}
+                title={label}
+                className={`w-8 h-7 flex items-center justify-center rounded-full text-base transition-colors ${locale === loc ? "bg-purple-600" : "hover:bg-gray-700/60"
+                  }`}
+              >
+                {flag}
+              </button>
+            ))}
+          </div>
+
           <a
             href="/CV_Andrei_Prado.pdf"
-            className="button-primary ml-4"
+            className="button-primary ml-2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download CV
+            {t("downloadCV")}
           </a>
         </nav>
 
@@ -78,28 +106,46 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-space-dark/95 backdrop-blur-md flex flex-col items-center justify-center z-40 transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          className={`fixed inset-0 bg-space-dark/95 backdrop-blur flex flex-col items-center justify-center z-40 transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
             }`}
         >
           <nav className="flex flex-col items-center gap-6 text-lg">
-            {navLinks.map(({ href, label }) => (
+            {navHrefs.map(({ href, key }) => (
               <Link
                 key={href}
                 href={href}
                 className={pathname === href ? "nav-link-active" : "nav-link"}
                 onClick={closeMobileMenu}
               >
-                {label}
+                {t(key)}
               </Link>
             ))}
+
+            {/* Mobile locale switcher */}
+            <div className="flex items-center gap-2 mt-2">
+              {localeOptions.map(({ locale: loc, flag, label }) => (
+                <button
+                  key={loc}
+                  onClick={() => { switchLocale(loc); closeMobileMenu(); }}
+                  className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${locale === loc
+                      ? "bg-purple-600 border-purple-600 text-white"
+                      : "border-gray-600 text-gray-400 hover:text-white"
+                    }`}
+                >
+                  <span>{flag}</span>
+                  <span>{label}</span>
+                </button>
+              ))}
+            </div>
+
             <a
-              href="/cv.pdf"
+              href="/CV_Andrei_Prado.pdf"
               className="button-primary mt-4"
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobileMenu}
             >
-              Download CV
+              {t("downloadCV")}
             </a>
           </nav>
         </div>

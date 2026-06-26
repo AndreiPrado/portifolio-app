@@ -1,12 +1,23 @@
-import Link from "next/link";
-import ProjectCard from "../components/ProjectCard";
-import ParallaxSection from "../components/ParallaxSection";
-import DirectionalParallax from "../components/DirectionalParallax";
-import { projects } from "../data/projects";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import ProjectCard from "../../components/ProjectCard";
+import ParallaxSection from "../../components/ParallaxSection";
+import DirectionalParallax from "../../components/DirectionalParallax";
+import { projects } from "../../data/projects";
 
 const parallaxSpeeds = [5, 7, 6, 4];
 
-export default function Projects() {
+export default async function Projects() {
+  const t = await getTranslations("Projects");
+
+  const items = projects.map((p) => ({
+    ...p,
+    title: t(`items.${p.id}.title`),
+    description: t(`items.${p.id}.description`),
+    role: t(`items.${p.id}.role`),
+    highlights: t.raw(`items.${p.id}.highlights`) as string[],
+  }));
+
   return (
     <div className="container mx-auto px-4 py-16">
       {/* Page Header */}
@@ -19,13 +30,9 @@ export default function Projects() {
         </div>
         <div className="relative z-10">
           <DirectionalParallax speed={3}>
-            <h1 className="heading-lg text-center mb-6 text-gradient">Projects</h1>
-            <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-4">
-              Enterprise platforms, streaming applications, personal projects and everything in between.
-              10+ years of building software across different domains and scales.
-            </p>
-            <p className="body-text text-gray-400 text-center max-w-2xl mx-auto mb-12 text-sm">
-              Note: most enterprise projects are confidential or client-owned. Contact me to discuss specific cases.
+            <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
+            <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
+              {t("subtitle")}
             </p>
           </DirectionalParallax>
         </div>
@@ -41,8 +48,8 @@ export default function Projects() {
         </div>
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <DirectionalParallax key={project.title} speed={parallaxSpeeds[index] ?? 5}>
+          {items.map((project, index) => (
+            <DirectionalParallax key={project.id} speed={parallaxSpeeds[index] ?? 5}>
               <div className="h-full">
                 <ProjectCard
                   title={project.title}
@@ -54,15 +61,13 @@ export default function Projects() {
                   projectUrl={project.projectUrl}
                   githubUrl={project.githubUrl}
                 />
-                {/* Role badge */}
                 <div className="mt-2 px-1">
                   <span className="text-xs text-gray-500">Role: </span>
                   <span className="text-xs text-gray-400">{project.role}</span>
                 </div>
-                {/* Highlights */}
                 <ul className="mt-3 px-1 space-y-1">
-                  {project.highlights.map((item) => (
-                    <li key={item} className="text-xs text-gray-500 flex items-start gap-2">
+                  {project.highlights.map((item, i) => (
+                    <li key={i} className="text-xs text-gray-500 flex items-start gap-2">
                       <span className="text-purple-600 mt-0.5 shrink-0">▸</span>
                       {item}
                     </li>
@@ -87,7 +92,7 @@ export default function Projects() {
             Let&apos;s talk about how I can help turn your idea into a well-architected, production-ready solution.
           </p>
           <div className="flex justify-center">
-            <Link href="/contato" className="button-primary">
+            <Link href="/contact" className="button-primary">
               Start a conversation
             </Link>
           </div>

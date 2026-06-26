@@ -1,8 +1,20 @@
-import Link from "next/link";
-import ExperienceCard from "../components/ExperienceCard";
-import { experiences } from "../data/experience";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import ExperienceCard from "../../components/ExperienceCard";
+import { experiences } from "../../data/experience";
 
-export default function Experience() {
+export default async function Experience() {
+  const t = await getTranslations("Experience");
+
+  const items = experiences.map((exp) => ({
+    ...exp,
+    title: t(`items.${exp.id}.title`),
+    company: t(`items.${exp.id}.company`),
+    period: t(`items.${exp.id}.period`),
+    description: t(`items.${exp.id}.description`),
+    highlights: t.raw(`items.${exp.id}.highlights`) as string[],
+  }));
+
   return (
     <div className="container mx-auto px-4 py-16">
       {/* Page Header */}
@@ -12,10 +24,9 @@ export default function Experience() {
           <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
         </div>
         <div className="relative z-10">
-          <h1 className="heading-lg text-center mb-6 text-gradient">Professional Experience</h1>
+          <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
           <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
-            10+ years building software across technical support, web development, streaming platforms,
-            enterprise applications, cloud infrastructure and technical leadership.
+            {t("subtitle")}
           </p>
         </div>
       </section>
@@ -28,9 +39,9 @@ export default function Experience() {
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10 space-y-6">
-          {experiences.map((exp) => (
+          {items.map((exp) => (
             <ExperienceCard
-              key={exp.title + exp.company}
+              key={exp.id}
               title={exp.title}
               company={exp.company}
               period={exp.period}
@@ -38,20 +49,23 @@ export default function Experience() {
               highlights={exp.highlights}
               skills={exp.skills}
               isActive={exp.isActive}
+              currentLabel={t("currentBadge")}
             />
           ))}
 
-          {/* Origin story — IT Support */}
+          {/* Origin story */}
           <div className="card relative pl-8 opacity-70">
             <div className="absolute left-[-10px] top-6 w-5 h-5 rounded-full border-4 border-gray-600 bg-gray-800"></div>
+            <div className="absolute top-0 right-0 px-2 py-1 bg-gray-700 text-gray-300 text-xs font-bold rounded-bl-lg rounded-tr-lg">
+              {t("originStory")}
+            </div>
             <h3 className="text-lg font-bold text-white">IT Support Technician</h3>
             <div className="flex justify-between items-center mb-2">
               <span className="text-gray-400 font-medium">Metrobyte</span>
               <span className="text-gray-500 text-sm">February 2014 – September 2015</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Started in technical support, handling hardware, software, Windows Server environments, user management and
-              troubleshooting. This foundation shaped an analytical mindset and a practical approach to problem solving.
+              {t("originStoryDesc")}
             </p>
           </div>
         </div>
@@ -68,7 +82,7 @@ export default function Experience() {
             Let&apos;s talk about how I can help your team build reliable, scalable and well-engineered products.
           </p>
           <div className="flex justify-center">
-            <Link href="/contato" className="button-primary">
+            <Link href="/contact" className="button-primary">
               Get in touch
             </Link>
           </div>

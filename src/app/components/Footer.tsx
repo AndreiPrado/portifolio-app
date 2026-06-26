@@ -1,16 +1,20 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/sobre", label: "About" },
-  { href: "/experiencia", label: "Experience" },
-  { href: "/projetos", label: "Projects" },
-  { href: "/contato", label: "Contact" },
+const navHrefs = [
+  { href: "/" as const, key: "home" },
+  { href: "/about" as const, key: "about" },
+  { href: "/experience" as const, key: "experience" },
+  { href: "/projects" as const, key: "projects" },
+  { href: "/contact" as const, key: "contact" },
 ];
 
 export default function Footer() {
+  const t = useTranslations("Nav");
+  const tf = useTranslations("Footer");
+
   return (
     <footer className="bg-space-black/80 border-t border-purple-500/20 py-10 mt-20">
       <div className="container mx-auto px-4">
@@ -20,10 +24,8 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
               Andrei Prado
             </h3>
-            <p className="text-gray-300 mb-2 text-sm">Tech Lead & Full Stack Software Engineer</p>
-            <p className="text-gray-400 mb-4 text-sm">
-              Building scalable products with Node.js, React, Cloud and GenAI.
-            </p>
+            <p className="text-gray-300 mb-2 text-sm">{tf("tagline")}</p>
+            <p className="text-gray-400 mb-4 text-sm">{tf("description")}</p>
             <div className="flex gap-4">
               <a
                 href="https://www.linkedin.com/in/andrei-prado"
@@ -65,12 +67,12 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Navigation</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">{tf("navigation")}</h3>
             <ul className="space-y-2">
-              {navLinks.map(({ href, label }) => (
+              {navHrefs.map(({ href, key }) => (
                 <li key={href}>
                   <Link href={href} className="text-gray-300 hover:text-white transition-colors text-sm">
-                    {label}
+                    {t(key)}
                   </Link>
                 </li>
               ))}
@@ -79,7 +81,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Contact</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">{tf("contact")}</h3>
             <ul className="space-y-3 text-gray-300 text-sm">
               <li className="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -95,14 +97,14 @@ export default function Footer() {
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span>São Paulo, Brazil — Remote friendly</span>
+                <span>{tf("location")}</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 pt-6 border-t border-purple-500/20 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} Andrei Prado. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Andrei Prado. {tf("rights")}</p>
         </div>
       </div>
     </footer>

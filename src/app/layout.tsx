@@ -1,60 +1,7 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import "./components/header.css"
-
-import Header from "./components/header";
-import Footer from "./components/Footer";
-import StarBackground from "./components/StarBackground";
-import ParallaxProviderWrapper from "./components/ParallaxProviderWrapper";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-export const metadata: Metadata = {
-  title: "Andrei Prado — Tech Lead & Full Stack Software Engineer",
-  description:
-    "Personal portfolio of Andrei Prado, Tech Lead and Full Stack Software Engineer focused on Node.js, React, TypeScript, GCP and GenAI solutions.",
-  keywords: [
-    "Andrei Prado",
-    "Tech Lead",
-    "Software Engineer",
-    "Full Stack Developer",
-    "Node.js",
-    "React",
-    "TypeScript",
-    "GCP",
-    "GenAI",
-    "Cloud Architecture",
-    "Technical Leadership",
-  ],
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ParallaxProviderWrapper>
-          <StarBackground />
-          <Header />
-          <main className="min-h-screen pt-24">
-            {children}
-          </main>
-          <Footer />
-        </ParallaxProviderWrapper>
-      </body>
+    <html>
+      <body>{children}</body>
     </html>
   );
 }

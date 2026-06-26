@@ -8,6 +8,7 @@ interface ExperienceCardProps {
   highlights?: string[];
   skills: string[];
   isActive?: boolean;
+  currentLabel?: string;
 }
 
 export default function ExperienceCard({
@@ -18,10 +19,10 @@ export default function ExperienceCard({
   highlights,
   skills,
   isActive = false,
+  currentLabel = "Current",
 }: ExperienceCardProps) {
   return (
     <div className={`card relative pl-8 ${isActive ? "border-l-2 border-l-purple-500" : ""}`}>
-      {/* Timeline dot */}
       <div
         className={`absolute left-[-10px] top-6 w-5 h-5 rounded-full border-4 ${
           isActive ? "border-purple-500 bg-purple-900" : "border-blue-500 bg-blue-900"
@@ -57,7 +58,7 @@ export default function ExperienceCard({
 
       {isActive && (
         <div className="absolute top-0 right-0 px-2 py-1 bg-purple-500 text-white text-xs font-bold rounded-bl-lg rounded-tr-lg">
-          Current
+          {currentLabel}
         </div>
       )}
     </div>

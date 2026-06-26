@@ -1,0 +1,208 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "Footer": {
+    "tagline": "Tech Lead & Full Stack Software Engineer",
+    "description": "Building scalable products with Node.js, React, Cloud and GenAI.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "location": "São Paulo, Brazil — Remote friendly",
+    "rights": "All rights reserved."
+  },
+  "Home": {
+    "greeting": "Hi, I'm",
+    "name": "Andrei Prado",
+    "titleLine1": "Tech Lead &",
+    "titleLine2": "Full Stack Engineer",
+    "subtitle": "Node.js · React · TypeScript · GCP · GenAI",
+    "body": "I design and build scalable digital products — from backend APIs to cloud infrastructure, from frontend interfaces to AI-powered workflows. I lead development teams, define technical architecture and deliver end-to-end solutions.",
+    "ctaWork": "See My Work",
+    "ctaContact": "Get in Touch",
+    "stats": {
+      "experience": "10+",
+      "experienceLabel": "Years of Experience",
+      "projects": "15+",
+      "projectsLabel": "Enterprise Projects",
+      "teams": "3",
+      "teamsLabel": "Languages"
+    },
+    "whatIBuild": "What I Build",
+    "featuredProjects": "Featured Projects",
+    "viewAllProjects": "View All Projects →"
+  },
+  "About": {
+    "title": "About Me",
+    "subtitle": "Engineering background, product mindset.",
+    "paragraph1": "I am a Tech Lead and Full Stack Software Engineer based in São Paulo, Brazil, with over 10 years of experience building web applications, APIs, cloud infrastructure and AI-powered products.",
+    "paragraph2": "My career has spanned frontend engineering, backend development, cloud architecture and technical leadership. I have worked with companies of different scales — from digital agencies to multinational enterprises — always focused on quality, scalability and delivery.",
+    "paragraph3": "Today I lead the technical scope of a GenAI-powered platform at RD Saúde, where I define architecture, manage cloud infrastructure on GCP, develop backend and frontend features, and support the team through mentoring, code reviews and technical planning.",
+    "paragraph4": "Beyond the stack, I care about engineering culture: writing maintainable code, enabling teams to move fast with confidence, and building things that are actually useful.",
+    "techStack": "Tech Stack",
+    "leadershipTitle": "Technical Leadership",
+    "leadershipSubtitle": "Beyond the code — driving teams, architecture and delivery.",
+    "highlights": [
+      "Led up to 4 development squads simultaneously on a streaming platform across Latin America.",
+      "Defined and implemented the full technical architecture of a GenAI-powered content platform.",
+      "Established code review processes, quality standards and development best practices.",
+      "Conducted 1:1s and technical mentoring sessions with developers at different seniority levels.",
+      "Aligned technical decisions with product, design and business stakeholders.",
+      "Managed CI/CD pipelines, deployment flows and release planning on large-scale projects.",
+      "Contributed to architecture decisions that improved platform performance and maintainability.",
+      "Onboarded and ramped up new engineers in complex codebases."
+    ],
+    "educationTitle": "Education & Languages",
+    "degree": "Bachelor's Degree in Information Systems",
+    "university": "Universidade Paulista (UNIP) — São Paulo, Brazil",
+    "languages": [
+      { "name": "Portuguese", "level": "Native" },
+      { "name": "English", "level": "Advanced (B2/C1)" }
+    ],
+    "ctaContact": "Contact Me"
+  },
+  "Experience": {
+    "title": "Experience",
+    "subtitle": "A decade of building, leading and shipping.",
+    "currentBadge": "Current",
+    "originStory": "Origin Story",
+    "originStoryDesc": "Where it all began — Metrobyte Tecnologia, 2014",
+    "items": {
+      "rd-saude": {
+        "title": "Technical Lead",
+        "company": "RD Saúde",
+        "period": "February 2025 – Present",
+        "description": "Leading the technical scope of a GenAI-powered content platform, from architecture design to production deployment. Responsible for backend, frontend, cloud infrastructure, CI/CD pipelines, AI integrations and technical guidance for the development team.",
+        "highlights": [
+          "Designed and implemented scalable backend services using Node.js, TypeScript and Fastify.",
+          "Built and maintained frontend features using React.js.",
+          "Managed cloud infrastructure and deployment flows on GCP.",
+          "Created and maintained CI/CD pipelines using Azure DevOps.",
+          "Integrated GenAI APIs such as OpenAI and Gemini into business workflows.",
+          "Supported developers through code reviews, mentoring, technical decisions and delivery planning."
+        ]
+      },
+      "directv": {
+        "title": "Roku Chapter Leader / Technical Reference",
+        "company": "DIRECTV GO / VRIO",
+        "period": "February 2022 – January 2025",
+        "description": "Led and supported the Roku application across Latin America, ensuring platform stability, release quality and technical alignment across multiple development teams.",
+        "highlights": [
+          "Supported four development teams across Latin America.",
+          "Managed code validation, releases and technical roadmap prioritization.",
+          "Drove technical alignment with stakeholders and product teams.",
+          "Acted as a technical reference for Roku development and platform stability."
+        ]
+      },
+      "accenture": {
+        "title": "Full Stack / Frontend Developer",
+        "company": "Accenture Brasil — Enterprise Projects",
+        "period": "January 2018 – January 2022",
+        "description": "Worked on enterprise web applications, internal tools, design systems and platform migrations for large-scale clients such as SKY, Monsanto and VRIO.",
+        "highlights": [
+          "Built responsive web applications and internal tools.",
+          "Integrated RESTful APIs across multiple systems.",
+          "Contributed to design systems and reusable UI components.",
+          "Performed code reviews and supported junior developers.",
+          "Improved accessibility and maintainability in legacy platforms."
+        ]
+      },
+      "studio-visual": {
+        "title": "Web Developer",
+        "company": "Studio Visual",
+        "period": "September 2015 – December 2017",
+        "description": "Developed websites and web applications using PHP, WordPress, HTML, CSS and JavaScript, from project conception to final delivery.",
+        "highlights": [
+          "Created and customized WordPress themes.",
+          "Built user-friendly interfaces for content management.",
+          "Developed reusable components for client websites."
+        ]
+      }
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "subtitle": "Products built end-to-end — from idea to production.",
+    "viewProject": "View Project",
+    "items": {
+      "genai-platform": {
+        "title": "GenAI Content Platform",
+        "type": "Enterprise / AI / Cloud",
+        "description": "A GenAI-powered platform designed to support content creation workflows, integrating AI APIs, backend services, frontend interfaces and cloud infrastructure.",
+        "role": "Technical Lead",
+        "highlights": [
+          "Architecture definition",
+          "Backend development with Node.js, TypeScript and Fastify",
+          "Frontend development with React.js",
+          "GCP infrastructure and Cloud Run deployments",
+          "CI/CD pipelines with Azure DevOps",
+          "GenAI API integrations (OpenAI, Gemini)",
+          "Technical leadership and code quality"
+        ]
+      },
+      "directv-roku": {
+        "title": "DIRECTV GO Roku Platform",
+        "type": "Streaming / OTT / Roku",
+        "description": "Roku streaming application used across Latin America, focused on stability, performance, release quality and roadmap execution.",
+        "role": "Roku Chapter Leader / Technical Reference",
+        "highlights": [
+          "Technical leadership across multiple squads",
+          "Code validation and release support",
+          "Stakeholder alignment and roadmap prioritization",
+          "Platform stability across Latin America"
+        ]
+      },
+      "enterprise-web": {
+        "title": "Enterprise Web Platforms",
+        "type": "Web / Frontend / Design System",
+        "description": "Corporate web applications, internal tools and platform migrations focused on reusable components, REST API integrations, responsive interfaces and maintainable code.",
+        "role": "Frontend / Full Stack Developer",
+        "highlights": [
+          "Responsive web applications and internal tools for SKY, Monsanto and VRIO",
+          "REST API integrations across multiple systems",
+          "Design systems and reusable UI components",
+          "Code reviews and developer support"
+        ]
+      },
+      "zele": {
+        "title": "Zele — Church Member Platform",
+        "type": "Personal Project / Full Stack",
+        "description": "A personal full stack project to manage church members, approvals, roles and digital member cards, built from scratch as product owner and sole developer.",
+        "role": "Full Stack Developer / Product Owner",
+        "highlights": [
+          "Backend architecture and database modeling",
+          "Authentication and admin approval flow",
+          "Frontend implementation with React and Tailwind CSS",
+          "Deployment on Railway with PostgreSQL"
+        ]
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Let's build something great together.",
+    "description": "Open to freelance projects, full-time positions and technical consulting. If you have something interesting to work on, reach out.",
+    "available": "Available for new opportunities",
+    "emailTitle": "Email",
+    "linkedinTitle": "LinkedIn",
+    "githubTitle": "GitHub",
+    "whatsappTitle": "WhatsApp",
+    "whatsappLabel": "+55 (11) 98856-4898",
+    "formTitle": "Send a Message",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project or opportunity...",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message sent!",
+    "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible.",
+    "errorMessage": "Something went wrong. Please try again or send an email directly."
+  }
+}

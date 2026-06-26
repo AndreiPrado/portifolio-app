@@ -1,10 +1,10 @@
-import { siteContent } from "../data/content";
+import { getTranslations } from "next-intl/server";
 
-const { contact } = siteContent;
+export default async function Contact() {
+  const t = await getTranslations("Contact");
 
-export default function Contact() {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 pt-16">
       {/* Page Header */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -12,10 +12,19 @@ export default function Contact() {
           <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
         </div>
         <div className="relative z-10">
-          <h1 className="heading-lg text-center mb-6 text-gradient">{contact.headline}</h1>
-          <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
-            {contact.pageSubtitle}
+          <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
+          <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-4">
+            {t("subtitle")}
           </p>
+          <p className="body-text text-gray-400 text-center max-w-2xl mx-auto mb-12 text-sm">
+            {t("description")}
+          </p>
+          <div className="flex justify-center">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              {t("available")}
+            </span>
+          </div>
         </div>
       </section>
 
@@ -29,50 +38,50 @@ export default function Contact() {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <h2 className="heading-md mb-8 text-white">Send a message</h2>
+            <h2 className="heading-md mb-8 text-white">{t("formTitle")}</h2>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-200 mb-2">
-                  {contact.form.nameLabel}
+                  {t("nameLabel")}
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
-                  placeholder={contact.form.namePlaceholder}
+                  placeholder={t("namePlaceholder")}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-gray-200 mb-2">
-                  {contact.form.emailLabel}
+                  {t("emailLabel")}
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
-                  placeholder={contact.form.emailPlaceholder}
+                  placeholder={t("emailPlaceholder")}
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-gray-200 mb-2">
-                  {contact.form.messageLabel}
+                  {t("messageLabel")}
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={5}
                   className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
-                  placeholder={contact.form.messagePlaceholder}
+                  placeholder={t("messagePlaceholder")}
                 ></textarea>
               </div>
 
               <div>
                 <button type="submit" className="button-primary w-full justify-center py-3">
-                  {contact.form.submit}
+                  {t("sendButton")}
                 </button>
               </div>
             </form>
@@ -92,13 +101,12 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{contact.info.email.label}</h3>
-                  <p className="text-gray-300 mb-1">{contact.info.email.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{t("emailTitle")}</h3>
                   <a
-                    href={contact.info.email.href}
+                    href="mailto:andrei.prado@hotmail.com"
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                   >
-                    {contact.info.email.value}
+                    andrei.prado@hotmail.com
                   </a>
                 </div>
               </div>
@@ -113,15 +121,14 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{contact.info.linkedin.label}</h3>
-                  <p className="text-gray-300 mb-1">{contact.info.linkedin.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{t("linkedinTitle")}</h3>
                   <a
-                    href={contact.info.linkedin.href}
+                    href="https://www.linkedin.com/in/andrei-prado"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                   >
-                    {contact.info.linkedin.value}
+                    linkedin.com/in/andrei-prado
                   </a>
                 </div>
               </div>
@@ -135,15 +142,14 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{contact.info.github.label}</h3>
-                  <p className="text-gray-300 mb-1">{contact.info.github.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{t("githubTitle")}</h3>
                   <a
-                    href={contact.info.github.href}
+                    href="https://github.com/AndreiPrado"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                   >
-                    {contact.info.github.value}
+                    github.com/AndreiPrado
                   </a>
                 </div>
               </div>
@@ -156,15 +162,14 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{contact.info.whatsapp.label}</h3>
-                  <p className="text-gray-300 mb-1">{contact.info.whatsapp.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{t("whatsappTitle")}</h3>
                   <a
-                    href={contact.info.whatsapp.href}
+                    href="https://wa.me/5511988564898"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                   >
-                    {contact.info.whatsapp.value}
+                    {t("whatsappLabel")}
                   </a>
                 </div>
               </div>
@@ -178,8 +183,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{contact.info.location.label}</h3>
-                  <p className="text-gray-300">{contact.info.location.value}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">Location</h3>
+                  <p className="text-gray-300">São Paulo, Brazil — Remote friendly</p>
                 </div>
               </div>
             </div>
@@ -192,7 +197,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/andrei-prado"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button-secondary flex items-center gap-2"
+                  className="button-secondary flex items-center gap-2 w-full sm:w-auto"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -206,7 +211,7 @@ export default function Contact() {
                   href="https://github.com/AndreiPrado"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button-secondary flex items-center gap-2"
+                  className="button-secondary flex items-center gap-2 w-full sm:w-auto"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
@@ -219,7 +224,7 @@ export default function Contact() {
                   href="https://wa.me/5511988564898"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button-secondary flex items-center gap-2"
+                  className="button-secondary flex items-center gap-2 w-full sm:w-auto"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -231,8 +236,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-
     </div>
   );
 }
