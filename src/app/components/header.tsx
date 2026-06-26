@@ -40,8 +40,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-space-black/80 backdrop-blur-md py-3" : "bg-transparent py-5"
-        }`}
+      className={`fixed w-full z-50 ${isScrolled ? "bg-space-black/80 py-3" : "bg-transparent py-5"
+        } ${isMobileMenuOpen ? "" : "backdrop-blur"}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
@@ -106,7 +106,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-space-dark/95 backdrop-blur flex flex-col items-center justify-center z-40 transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          className={`fixed inset-0 bg-transparent backdrop-blur flex flex-col items-center justify-center z-40 transition-all duration-300 h-screen md:hidden ${isMobileMenuOpen ? "opacity-100" : "opacity-0"
             }`}
         >
           <nav className="flex flex-col items-center gap-6 text-lg">
@@ -128,8 +128,8 @@ export default function Header() {
                   key={loc}
                   onClick={() => { switchLocale(loc); closeMobileMenu(); }}
                   className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${locale === loc
-                      ? "bg-purple-600 border-purple-600 text-white"
-                      : "border-gray-600 text-gray-400 hover:text-white"
+                    ? "bg-purple-600 border-purple-600 text-white"
+                    : "border-gray-600 text-gray-400 hover:text-white"
                     }`}
                 >
                   <span>{flag}</span>
