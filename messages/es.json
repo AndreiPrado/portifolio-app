@@ -33,21 +33,52 @@
       "teamsLabel": "Idiomas"
     },
     "whatIBuild": "Lo Que Construyo",
+    "skillCards": {
+      "frontend": {
+        "title": "Frontend",
+        "description": "React.js, TypeScript, JavaScript, HTML5, CSS, Sass, Tailwind CSS, Bootstrap"
+      },
+      "backend": {
+        "title": "Backend y APIs",
+        "description": "Node.js, Fastify, TypeScript, APIs REST, PostgreSQL, Drizzle ORM"
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "description": "GCP, Cloud Run, Cloud SQL, Docker, Azure DevOps, CI/CD"
+      },
+      "ai": {
+        "title": "IA & GenAI",
+        "description": "APIs de OpenAI, APIs de Gemini, integraciones GenAI, RAG, flujos con IA"
+      }
+    },
+    "viewFullStack": "Ver stack completo",
     "featuredProjects": "Proyectos Destacados",
     "viewAllProjects": "Ver Todos los Proyectos →"
   },
   "About": {
     "title": "Sobre Mí",
     "subtitle": "Experiencia técnica, mentalidad de producto.",
+    "bioGreeting": "Hola, soy",
     "paragraph1": "Soy Tech Lead e Ingeniero Full Stack con base en São Paulo, Brasil, con más de 10 años de experiencia construyendo aplicaciones web, APIs, infraestructura en la nube y productos con inteligencia artificial.",
     "paragraph2": "Mi carrera abarcó ingeniería frontend, desarrollo backend, arquitectura en la nube y liderazgo técnico. Trabajé con empresas de diferentes tamaños — desde agencias digitales hasta multinacionales — siempre enfocado en calidad, escalabilidad y entrega.",
     "paragraph3": "Hoy lidero el alcance técnico de una plataforma de contenido con GenAI en RD Saúde, donde defino la arquitectura, gestiono la infraestructura en la nube con GCP, desarrollo funcionalidades de backend y frontend, y apoyo al equipo mediante mentoría, revisiones de código y planificación técnica.",
     "paragraph4": "Más allá del stack, me preocupo por la cultura de ingeniería: escribir código sostenible, capacitar a los equipos para avanzar con confianza y construir cosas que realmente sean útiles.",
+    "ctaProjects": "Ver Proyectos",
+    "ctaExperience": "Ver Experiencia",
+    "ctaLinkedIn": "LinkedIn",
     "techStack": "Stack Tecnológico",
+    "skillTitles": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "ai": "IA & GenAI",
+      "leadership": "Liderazgo",
+      "other": "Otros"
+    },
     "leadershipTitle": "Liderazgo Técnico",
     "leadershipSubtitle": "Más allá del código — guiando equipos, arquitectura y entregas.",
     "highlights": [
-      "Lideré hasta 4 squads de desarrollo simultáneamente en una plataforma de streaming en América Latina.",
+      "Lideré equipos de desarrollo en múltiples squads en una plataforma de streaming para América Latina.",
       "Definí e implementé la arquitectura técnica completa de una plataforma de contenido con GenAI.",
       "Establecí procesos de revisión de código, estándares de calidad y buenas prácticas de desarrollo.",
       "Realicé 1:1s y sesiones de mentoría técnica con desarrolladores en diferentes niveles de seniority.",
@@ -57,6 +88,8 @@
       "Incorporé y nivelé nuevos ingenieros en codebases complejos."
     ],
     "educationTitle": "Formación e Idiomas",
+    "educationCardTitle": "Formación",
+    "languagesCardTitle": "Idiomas",
     "degree": "Licenciatura en Sistemas de Información",
     "university": "Universidade Paulista (UNIP) — São Paulo, Brasil",
     "languages": [
@@ -71,7 +104,17 @@
     "subtitle": "Una década construyendo, liderando y entregando.",
     "currentBadge": "Actual",
     "originStory": "Donde Todo Comenzó",
-    "originStoryDesc": "Metrobyte Tecnologia, 2014",
+    "originCard": {
+      "role": "Técnico de Soporte IT",
+      "company": "Metrobyte",
+      "period": "Febrero 2014 – Septiembre 2015"
+    },
+    "originStoryDesc": "Donde todo comenzó — hardware, software, infraestructura de red y resolución de problemas en la práctica. Esta base moldeó una mentalidad analítica y un enfoque hands-on para la resolución de problemas.",
+    "cta": {
+      "title": "¿Quieres saber más?",
+      "description": "No dudes en escribirme — siempre dispuesto a hablar sobre tecnología, proyectos o cualquier tema de ingeniería.",
+      "button": "Saludar"
+    },
     "items": {
       "rd-saude": {
         "title": "Tech Lead",
@@ -129,6 +172,12 @@
     "title": "Proyectos",
     "subtitle": "Productos construidos de extremo a extremo — de la idea a la producción.",
     "viewProject": "Ver Proyecto",
+    "roleLabel": "Rol",
+    "cta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "description": "¿Un desafío que resolver o una idea que construir? Hablemos de ello.",
+      "button": "Iniciar conversación"
+    },
     "items": {
       "genai-platform": {
         "title": "Plataforma de Contenido con GenAI",
@@ -188,6 +237,10 @@
     "subtitle": "Construyamos algo increíble juntos.",
     "description": "¿Tienes una idea, un desafío o simplemente quieres hablar de tecnología? Siempre estoy dispuesto a una buena conversación.",
     "available": "Hablemos",
+    "infoTitle": "Información de Contacto",
+    "locationTitle": "Ubicación",
+    "locationValue": "São Paulo, Brasil — Disponible remotamente",
+    "connectTitle": "Conectar",
     "emailTitle": "Correo",
     "linkedinTitle": "LinkedIn",
     "githubTitle": "GitHub",

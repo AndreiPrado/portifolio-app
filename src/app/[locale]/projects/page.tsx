@@ -5,8 +5,6 @@ import ParallaxSection from "../../components/ParallaxSection";
 import DirectionalParallax from "../../components/DirectionalParallax";
 import { projects } from "../../data/projects";
 
-const parallaxSpeeds = [5, 7, 6, 4];
-
 export default async function Projects() {
   const t = await getTranslations("Projects");
 
@@ -19,7 +17,7 @@ export default async function Projects() {
   }));
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4">
       {/* Page Header */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -48,33 +46,31 @@ export default async function Projects() {
         </div>
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {items.map((project, index) => (
-            <DirectionalParallax key={project.id} speed={parallaxSpeeds[index] ?? 5}>
-              <div className="h-full">
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  gradientFrom={project.gradientFrom}
-                  gradientTo={project.gradientTo}
-                  label={project.label}
-                  tags={project.skills}
-                  projectUrl={project.projectUrl}
-                  githubUrl={project.githubUrl}
-                />
-                <div className="mt-2 px-1">
-                  <span className="text-xs text-gray-500">Role: </span>
-                  <span className="text-xs text-gray-400">{project.role}</span>
-                </div>
-                <ul className="mt-3 px-1 space-y-1">
-                  {project.highlights.map((item, i) => (
-                    <li key={i} className="text-xs text-gray-500 flex items-start gap-2">
-                      <span className="text-purple-600 mt-0.5 shrink-0">▸</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+          {items.map((project) => (
+            <div key={project.id}>
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                gradientFrom={project.gradientFrom}
+                gradientTo={project.gradientTo}
+                label={project.label}
+                tags={project.skills}
+                projectUrl={project.projectUrl}
+                githubUrl={project.githubUrl}
+              />
+              <div className="mt-2 px-1">
+                <span className="text-xs text-gray-500">{t("roleLabel")}: </span>
+                <span className="text-xs text-gray-400">{project.role}</span>
               </div>
-            </DirectionalParallax>
+              <ul className="mt-3 px-1 space-y-1">
+                {project.highlights.map((item, i) => (
+                  <li key={i} className="text-xs text-gray-500 flex items-start gap-2">
+                    <span className="text-purple-600 mt-0.5 shrink-0">▸</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </section>
@@ -87,13 +83,13 @@ export default async function Projects() {
           </ParallaxSection>
         </div>
         <div className="relative z-10">
-          <h3 className="text-2xl font-bold text-white mb-4">Have a project in mind?</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">{t("cta.title")}</h3>
           <p className="body-text text-gray-300 mb-6 max-w-2xl mx-auto">
-            Let&apos;s talk about how I can help turn your idea into a well-architected, production-ready solution.
+            {t("cta.description")}
           </p>
           <div className="flex justify-center">
             <Link href="/contact" className="button-primary">
-              Start a conversation
+              {t("cta.button")}
             </Link>
           </div>
         </div>

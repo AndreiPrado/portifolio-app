@@ -9,7 +9,7 @@ export default async function About() {
   const languages = t.raw("languages") as { name: string; level: string }[];
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4">
       {/* Page Header */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -49,7 +49,7 @@ export default async function About() {
 
           <div className="md:w-2/3">
             <h2 className="heading-md mb-6 text-white">
-              Hi, I&apos;m{" "}
+              {t("bioGreeting")}{" "}
               <span className="text-purple-400">Andrei Prado</span>
             </h2>
 
@@ -60,10 +60,10 @@ export default async function About() {
 
             <div className="flex flex-wrap gap-4 mt-8">
               <Link href="/projects" className="button-primary">
-                View Projects
+                {t("ctaProjects")}
               </Link>
               <Link href="/experience" className="button-secondary">
-                See Experience
+                {t("ctaExperience")}
               </Link>
               <a
                 href="https://www.linkedin.com/in/andrei-prado"
@@ -76,7 +76,7 @@ export default async function About() {
                   <rect width="4" height="12" x="2" y="9" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
-                LinkedIn
+                {t("ctaLinkedIn")}
               </a>
             </div>
           </div>
@@ -96,12 +96,7 @@ export default async function About() {
               className={`card p-6 transition-all duration-300 ${category.borderHover}`}
             >
               <h3 className={`text-lg font-bold mb-4 ${category.accentColor}`}>
-                {category.id === "frontend" && "Frontend"}
-                {category.id === "backend" && "Backend"}
-                {category.id === "cloud" && "Cloud & DevOps"}
-                {category.id === "ai" && "AI & GenAI"}
-                {category.id === "leadership" && "Leadership"}
-                {category.id === "other" && "Other"}
+                {t(`skillTitles.${category.id}`)}
               </h3>
               <ul className="space-y-2">
                 {category.skills.map((skill) => (
@@ -151,34 +146,19 @@ export default async function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <div className="card p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Education</h3>
+            <h3 className="text-lg font-bold text-white mb-4">{t("educationCardTitle")}</h3>
             <h4 className="text-purple-400 font-semibold mb-1">{t("degree")}</h4>
             <p className="text-gray-300 text-sm">{t("university")}</p>
           </div>
 
           <div className="card p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Languages</h3>
+            <h3 className="text-lg font-bold text-white mb-4">{t("languagesCardTitle")}</h3>
             {languages.map((lang) => (
               <p key={lang.name} className="text-gray-300 text-sm mb-2">
                 <span className="text-white font-medium">{lang.name}</span>
                 <span className="text-gray-400"> — {lang.level}</span>
               </p>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="text-center mb-16">
-        <div className="card p-8 max-w-3xl mx-auto">
-          <h2 className="heading-md mb-4">Let&apos;s work together</h2>
-          <p className="body-text text-gray-300 mb-8">
-            Open to conversations about technical leadership, full stack engineering, cloud solutions and remote opportunities.
-          </p>
-          <div className="flex justify-center">
-            <Link href="/contact" className="button-primary">
-              {t("ctaContact")}
-            </Link>
           </div>
         </div>
       </section>

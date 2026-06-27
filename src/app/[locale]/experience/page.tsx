@@ -16,7 +16,7 @@ export default async function Experience() {
   }));
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4">
       {/* Page Header */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -59,10 +59,10 @@ export default async function Experience() {
             <div className="absolute top-0 right-0 px-2 py-1 bg-gray-700 text-gray-300 text-xs font-bold rounded-bl-lg rounded-tr-lg">
               {t("originStory")}
             </div>
-            <h3 className="text-lg font-bold text-white">IT Support Technician</h3>
+            <h3 className="text-lg font-bold text-white">{t("originCard.role")}</h3>
             <div className="flex justify-between items-center mb-2">
-              <span className="text-gray-400 font-medium">Metrobyte</span>
-              <span className="text-gray-500 text-sm">February 2014 – September 2015</span>
+              <span className="text-gray-400 font-medium">{t("originCard.company")}</span>
+              <span className="text-gray-500 text-sm">{t("originCard.period")}</span>
             </div>
             <p className="text-gray-400 text-sm">
               {t("originStoryDesc")}
@@ -77,13 +77,13 @@ export default async function Experience() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full filter blur-3xl"></div>
         </div>
         <div className="relative z-10">
-          <h3 className="text-2xl font-bold text-white mb-4">Looking for a Technical Lead?</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">{t("cta.title")}</h3>
           <p className="body-text text-gray-300 mb-6 max-w-2xl mx-auto">
-            Let&apos;s talk about how I can help your team build reliable, scalable and well-engineered products.
+            {t("cta.description")}
           </p>
           <div className="flex justify-center">
             <Link href="/contact" className="button-primary">
-              Get in touch
+              {t("cta.button")}
             </Link>
           </div>
         </div>

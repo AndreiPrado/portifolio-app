@@ -96,18 +96,7 @@ export default async function Home() {
         </div>
 
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-purple-500"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
             <path d="M12 5v14"></path>
             <path d="m19 12-7 7-7-7"></path>
           </svg>
@@ -128,56 +117,47 @@ export default async function Home() {
               <div className="card p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
-                    <path d="m18 16 4-4-4-4"></path>
-                    <path d="m6 8-4 4 4 4"></path>
-                    <path d="m14.5 4-5 16"></path>
+                    <path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path>
                   </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">Frontend</h4>
-                <p className="text-gray-300 text-sm">React.js, TypeScript, JavaScript, HTML5, CSS, Sass, Tailwind CSS, Bootstrap</p>
+                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.frontend.title")}</h4>
+                <p className="text-gray-300 text-sm">{t("skillCards.frontend.description")}</p>
               </div>
 
               <div className="card p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
-                    <path d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3Z"></path>
-                    <path d="M10 17v-4"></path>
-                    <path d="M14 17v-7"></path>
-                    <path d="M5 10h14"></path>
+                    <path d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3Z"></path><path d="M10 17v-4"></path><path d="M14 17v-7"></path><path d="M5 10h14"></path>
                   </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">Backend & APIs</h4>
-                <p className="text-gray-300 text-sm">Node.js, Fastify, TypeScript, REST APIs, PostgreSQL, Drizzle ORM</p>
+                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.backend.title")}</h4>
+                <p className="text-gray-300 text-sm">{t("skillCards.backend.description")}</p>
               </div>
 
               <div className="card p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500">
-                    <path d="m3.5 8.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 1.2a2 2 0 0 0-2 0L3.5 5.3a2 2 0 0 0 0 3.4Z"></path>
-                    <path d="m3.5 14.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 7.2a2 2 0 0 0-2 0L3.5 11.3a2 2 0 0 0 0 3.4Z"></path>
-                    <path d="m3.5 20.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 13.2a2 2 0 0 0-2 0l-7.5 4.1a2 2 0 0 0 0 3.4Z"></path>
+                    <path d="m3.5 8.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 1.2a2 2 0 0 0-2 0L3.5 5.3a2 2 0 0 0 0 3.4Z"></path><path d="m3.5 14.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 7.2a2 2 0 0 0-2 0L3.5 11.3a2 2 0 0 0 0 3.4Z"></path><path d="m3.5 20.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 13.2a2 2 0 0 0-2 0l-7.5 4.1a2 2 0 0 0 0 3.4Z"></path>
                   </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">Cloud & DevOps</h4>
-                <p className="text-gray-300 text-sm">GCP, Cloud Run, Cloud SQL, Docker, Azure DevOps, CI/CD</p>
+                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.cloud.title")}</h4>
+                <p className="text-gray-300 text-sm">{t("skillCards.cloud.description")}</p>
               </div>
 
               <div className="card p-6 hover:border-pink-500/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-500">
-                    <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
-                    <path d="M12 12 2.1 9.7"></path>
-                    <path d="M12 12V2"></path>
+                    <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 9.7"></path><path d="M12 12V2"></path>
                   </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">AI & GenAI</h4>
-                <p className="text-gray-300 text-sm">OpenAI APIs, Gemini APIs, GenAI integrations, RAG, AI-powered workflows</p>
+                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.ai.title")}</h4>
+                <p className="text-gray-300 text-sm">{t("skillCards.ai.description")}</p>
               </div>
             </div>
 
             <div className="text-center mt-10">
               <Link href="/about" className="button-secondary">
-                View full tech stack
+                {t("viewFullStack")}
               </Link>
             </div>
           </ScrollReveal>
@@ -188,7 +168,7 @@ export default async function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-24 relative">
+      <section className="pt-24 relative">
         <div className="relative z-10">
           <ScrollReveal delay={100} direction="up" distance="30px">
             <div className="text-center mb-16">
