@@ -12,21 +12,18 @@ const i18n = {
   notification: {
     en: {
       subject: (name: string) => `New message from ${name} — Portfolio`,
-      title: "New message via portfolio",
       labelName: "Name",
       labelEmail: "Email",
       labelMessage: "Message",
     },
     pt: {
       subject: (name: string) => `Nova mensagem de ${name} — Portfólio`,
-      title: "Nova mensagem pelo portfólio",
       labelName: "Nome",
       labelEmail: "E-mail",
       labelMessage: "Mensagem",
     },
     es: {
       subject: (name: string) => `Nuevo mensaje de ${name} — Portafolio`,
-      title: "Nuevo mensaje por el portafolio",
       labelName: "Nombre",
       labelEmail: "Correo",
       labelMessage: "Mensaje",
@@ -34,19 +31,19 @@ const i18n = {
   },
   confirmation: {
     en: {
-      subject: "Got your message — Andrei Prado",
+      subject: "Message received!",
       greeting: (name: string) => `Hi, ${name}!`,
-      body: "I received your message and will get back to you shortly.",
+      body: "Thanks for reaching out. I'll get back to you as soon as possible.",
     },
     pt: {
-      subject: "Recebi sua mensagem — Andrei Prado",
+      subject: "Mensagem recebida!",
       greeting: (name: string) => `Olá, ${name}!`,
-      body: "Recebi sua mensagem e entrarei em contato em breve.",
+      body: "Obrigado pelo contato. Retornarei em breve.",
     },
     es: {
-      subject: "Recibí tu mensaje — Andrei Prado",
+      subject: "¡Mensaje recibido!",
       greeting: (name: string) => `¡Hola, ${name}!`,
-      body: "Recibí tu mensaje y me pondré en contacto contigo pronto.",
+      body: "Gracias por escribir. Te responderé lo antes posible.",
     },
   },
 };
@@ -66,7 +63,6 @@ export async function sendContactNotification(data: {
     subject: t.subject(data.name),
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #7c3aed;">${t.title}</h2>
         <p><strong>${t.labelName}:</strong> ${data.name}</p>
         <p><strong>${t.labelEmail}:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
         <p><strong>${t.labelMessage}:</strong></p>
@@ -93,7 +89,6 @@ export async function sendContactConfirmation(data: {
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #7c3aed;">${t.greeting(data.name)}</h2>
         <p>${t.body}</p>
-        <p style="color: #6b7280; font-size: 14px;">— Andrei Prado</p>
       </div>
     `,
   });
