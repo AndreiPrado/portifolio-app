@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import ContactForm from "../../components/ContactForm";
 
 export default async function Contact() {
   const t = await getTranslations("Contact");
@@ -39,52 +40,7 @@ export default async function Contact() {
           {/* Contact Form */}
           <div>
             <h2 className="heading-md mb-8 text-white">{t("formTitle")}</h2>
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-gray-200 mb-2">
-                  {t("nameLabel")}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
-                  placeholder={t("namePlaceholder")}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-gray-200 mb-2">
-                  {t("emailLabel")}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
-                  placeholder={t("emailPlaceholder")}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-gray-200 mb-2">
-                  {t("messageLabel")}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
-                  placeholder={t("messagePlaceholder")}
-                ></textarea>
-              </div>
-
-              <div>
-                <button type="submit" className="button-primary w-full justify-center py-3">
-                  {t("sendButton")}
-                </button>
-              </div>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Contact Info */}
