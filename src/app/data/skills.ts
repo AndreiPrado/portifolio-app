@@ -1,5 +1,6 @@
 export interface SkillCategory {
   id: string;
+  title?: string;
   skills: string[];
   accentColor: string;
   bgColor: string;
@@ -9,6 +10,7 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     id: "frontend",
+    title: "Frontend",
     skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS", "Sass", "Bootstrap", "Tailwind CSS"],
     accentColor: "text-purple-400",
     bgColor: "bg-purple-500/10",
@@ -16,6 +18,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "backend",
+    title: "Backend",
     skills: ["Node.js", "Fastify", "TypeScript", "REST APIs", "PostgreSQL", "Drizzle ORM", "Zod"],
     accentColor: "text-blue-400",
     bgColor: "bg-blue-500/10",
@@ -23,6 +26,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "cloud",
+    title: "Cloud & DevOps",
     skills: ["Google Cloud Platform", "Cloud Run", "Cloud SQL", "Cloud Storage", "Pub/Sub", "Docker", "Azure DevOps", "CI/CD"],
     accentColor: "text-green-400",
     bgColor: "bg-green-500/10",

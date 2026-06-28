@@ -17,34 +17,20 @@
   },
   "Home": {
     "greeting": "Hola, soy",
-    "name": "Andrei Prado",
-    "titleLine1": "Tech Lead &",
     "titleLine2": "Ingeniero Full Stack",
-    "subtitle": "Node.js · React · TypeScript · GCP · GenAI",
     "body": "Diseño y construyo productos digitales escalables — desde APIs backend hasta infraestructura en la nube, desde interfaces frontend hasta flujos con inteligencia artificial. Lidero equipos de desarrollo, defino arquitectura técnica y entrego soluciones completas.",
     "ctaWork": "Ver Proyectos",
     "ctaContact": "Contactar",
     "stats": {
-      "experience": "10+",
       "experienceLabel": "Años de Experiencia",
-      "projects": "15+",
       "projectsLabel": "Proyectos Enterprise",
-      "teams": "3",
       "teamsLabel": "Idiomas"
     },
     "whatIBuild": "Lo Que Construyo",
     "skillCards": {
-      "frontend": {
-        "title": "Frontend",
-        "description": "React.js, TypeScript, JavaScript, HTML5, CSS, Sass, Tailwind CSS, Bootstrap"
-      },
       "backend": {
         "title": "Backend y APIs",
         "description": "Node.js, Fastify, TypeScript, APIs REST, PostgreSQL, Drizzle ORM"
-      },
-      "cloud": {
-        "title": "Cloud & DevOps",
-        "description": "GCP, Cloud Run, Cloud SQL, Docker, Azure DevOps, CI/CD"
       },
       "ai": {
         "title": "IA & GenAI",
@@ -65,12 +51,8 @@
     "paragraph4": "Más allá del stack, me preocupo por la cultura de ingeniería: escribir código sostenible, capacitar a los equipos para avanzar con confianza y construir cosas que realmente sean útiles.",
     "ctaProjects": "Ver Proyectos",
     "ctaExperience": "Ver Experiencia",
-    "ctaLinkedIn": "LinkedIn",
     "techStack": "Stack Tecnológico",
     "skillTitles": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "cloud": "Cloud & DevOps",
       "ai": "IA & GenAI",
       "leadership": "Liderazgo",
       "other": "Otros"
@@ -106,7 +88,6 @@
     "originStory": "Donde Todo Comenzó",
     "originCard": {
       "role": "Técnico de Soporte IT",
-      "company": "Metrobyte",
       "period": "Febrero 2014 – Septiembre 2015"
     },
     "originStoryDesc": "Donde todo comenzó — hardware, software, infraestructura de red y resolución de problemas en la práctica. Esta base moldeó una mentalidad analítica y un enfoque hands-on para la resolución de problemas.",
@@ -118,7 +99,6 @@
     "items": {
       "rd-saude": {
         "title": "Tech Lead",
-        "company": "RD Saúde",
         "period": "Febrero 2025 – Presente",
         "description": "Liderando el alcance técnico de una plataforma de contenido con GenAI, desde el diseño de la arquitectura hasta el despliegue en producción. Responsable de backend, frontend, infraestructura en la nube, pipelines de CI/CD, integraciones de IA y orientación técnica al equipo de desarrollo.",
         "highlights": [
@@ -132,7 +112,6 @@
       },
       "directv": {
         "title": "Roku Chapter Leader / Referencia Técnica",
-        "company": "DIRECTV GO / VRIO",
         "period": "Febrero 2022 – Enero 2025",
         "description": "Lideré y apoyé la aplicación Roku en América Latina, garantizando la estabilidad de la plataforma, la calidad de los releases y la alineación técnica entre múltiples equipos de desarrollo.",
         "highlights": [
@@ -157,7 +136,6 @@
       },
       "studio-visual": {
         "title": "Desarrollador Web",
-        "company": "Studio Visual",
         "period": "Septiembre 2015 – Diciembre 2017",
         "description": "Desarrollé sitios web y aplicaciones web con PHP, WordPress, HTML, CSS y JavaScript, desde la concepción del proyecto hasta la entrega final.",
         "highlights": [
@@ -240,12 +218,7 @@
     "infoTitle": "Información de Contacto",
     "locationTitle": "Ubicación",
     "locationValue": "São Paulo, Brasil — Disponible remotamente",
-    "connectTitle": "Conectar",
-    "emailTitle": "Correo",
-    "linkedinTitle": "LinkedIn",
-    "githubTitle": "GitHub",
-    "whatsappTitle": "WhatsApp",
-    "whatsappLabel": "+55 (11) 98856-4898",
+"emailTitle": "Correo",
     "formTitle": "Enviar un Mensaje",
     "nameLabel": "Nombre",
     "namePlaceholder": "Tu nombre",

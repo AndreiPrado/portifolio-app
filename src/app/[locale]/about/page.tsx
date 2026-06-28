@@ -76,7 +76,7 @@ export default async function About() {
                   <rect width="4" height="12" x="2" y="9" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
-                {t("ctaLinkedIn")}
+                LinkedIn
               </a>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default async function About() {
               className={`card p-6 transition-all duration-300 ${category.borderHover}`}
             >
               <h3 className={`text-lg font-bold mb-4 ${category.accentColor}`}>
-                {t(`skillTitles.${category.id}`)}
+                {category.title ?? t(`skillTitles.${category.id}`)}
               </h3>
               <ul className="space-y-2">
                 {category.skills.map((skill) => (

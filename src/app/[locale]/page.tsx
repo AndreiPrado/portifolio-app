@@ -28,16 +28,16 @@ export default async function Home() {
             <ScrollReveal delay={100} direction="up" distance="30px">
               <p className="text-purple-400 font-medium mb-3 text-lg">
                 {t("greeting")}{" "}
-                <span className="text-white font-bold">{t("name")}</span>
+                <span className="text-white font-bold">Andrei Prado</span>
               </p>
               <h1 className="heading-xl mb-6">
-                <span className="text-gradient">{t("titleLine1")}</span>{" "}
+                <span className="text-gradient">Tech Lead &</span>{" "}
                 <span className="text-white">{t("titleLine2")}</span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={200} direction="up" distance="30px">
-              <p className="body-text text-gray-300 mb-2 max-w-xl font-medium">{t("subtitle")}</p>
+              <p className="body-text text-gray-300 mb-2 max-w-xl font-medium">Node.js · React · TypeScript · GCP · GenAI</p>
               <p className="body-text text-gray-400 mb-8 max-w-xl">{t("body")}</p>
             </ScrollReveal>
 
@@ -55,15 +55,15 @@ export default async function Home() {
             <ScrollReveal delay={400} direction="up" distance="30px">
               <div className="mt-12 flex items-center gap-8">
                 <div>
-                  <h3 className="text-4xl font-bold text-white">{t("stats.experience")}</h3>
+                  <h3 className="text-4xl font-bold text-white">10+</h3>
                   <p className="text-gray-400 text-sm">{t("stats.experienceLabel")}</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-bold text-white">{t("stats.projects")}</h3>
+                  <h3 className="text-4xl font-bold text-white">15+</h3>
                   <p className="text-gray-400 text-sm">{t("stats.projectsLabel")}</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-bold text-white">{t("stats.teams")}</h3>
+                  <h3 className="text-4xl font-bold text-white">3</h3>
                   <p className="text-gray-400 text-sm">{t("stats.teamsLabel")}</p>
                 </div>
               </div>
@@ -120,8 +120,8 @@ export default async function Home() {
                     <path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path>
                   </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.frontend.title")}</h4>
-                <p className="text-gray-300 text-sm">{t("skillCards.frontend.description")}</p>
+                <h4 className="text-lg font-bold text-white mb-2">Frontend</h4>
+                <p className="text-gray-300 text-sm">React.js, TypeScript, JavaScript, HTML5, CSS, Sass, Tailwind CSS, Bootstrap</p>
               </div>
 
               <div className="card p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -140,8 +140,8 @@ export default async function Home() {
                     <path d="m3.5 8.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 1.2a2 2 0 0 0-2 0L3.5 5.3a2 2 0 0 0 0 3.4Z"></path><path d="m3.5 14.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 7.2a2 2 0 0 0-2 0L3.5 11.3a2 2 0 0 0 0 3.4Z"></path><path d="m3.5 20.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 13.2a2 2 0 0 0-2 0l-7.5 4.1a2 2 0 0 0 0 3.4Z"></path>
                   </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.cloud.title")}</h4>
-                <p className="text-gray-300 text-sm">{t("skillCards.cloud.description")}</p>
+                <h4 className="text-lg font-bold text-white mb-2">Cloud & DevOps</h4>
+                <p className="text-gray-300 text-sm">GCP, Cloud Run, Cloud SQL, Docker, Azure DevOps, CI/CD</p>
               </div>
 
               <div className="card p-6 hover:border-pink-500/50 transition-all duration-300">

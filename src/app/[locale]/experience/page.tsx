@@ -9,7 +9,7 @@ export default async function Experience() {
   const items = experiences.map((exp) => ({
     ...exp,
     title: t(`items.${exp.id}.title`),
-    company: t(`items.${exp.id}.company`),
+    company: exp.company ?? t(`items.${exp.id}.company`),
     period: t(`items.${exp.id}.period`),
     description: t(`items.${exp.id}.description`),
     highlights: t.raw(`items.${exp.id}.highlights`) as string[],
@@ -61,7 +61,7 @@ export default async function Experience() {
             </div>
             <h3 className="text-lg font-bold text-white">{t("originCard.role")}</h3>
             <div className="flex justify-between items-center mb-2">
-              <span className="text-gray-400 font-medium">{t("originCard.company")}</span>
+              <span className="text-gray-400 font-medium">Metrobyte</span>
               <span className="text-gray-500 text-sm">{t("originCard.period")}</span>
             </div>
             <p className="text-gray-400 text-sm">

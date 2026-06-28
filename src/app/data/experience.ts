@@ -1,5 +1,6 @@
 export interface ExperienceData {
   id: string;
+  company?: string;
   skills: string[];
   isActive?: boolean;
 }
@@ -7,11 +8,13 @@ export interface ExperienceData {
 export const experiences: ExperienceData[] = [
   {
     id: "rd-saude",
+    company: "RD Saúde",
     skills: ["Node.js", "TypeScript", "Fastify", "React.js", "GCP", "Azure DevOps", "Docker", "OpenAI", "Gemini"],
     isActive: true,
   },
   {
     id: "directv",
+    company: "DIRECTV GO / VRIO",
     skills: ["BrightScript", "SceneGraph", "Roku SDK", "Git", "CI/CD"],
   },
   {
@@ -20,6 +23,7 @@ export const experiences: ExperienceData[] = [
   },
   {
     id: "studio-visual",
+    company: "Studio Visual",
     skills: ["PHP", "WordPress", "JavaScript", "HTML", "CSS"],
   },
 ];

@@ -17,34 +17,20 @@
   },
   "Home": {
     "greeting": "Olá, sou",
-    "name": "Andrei Prado",
-    "titleLine1": "Tech Lead &",
     "titleLine2": "Engenheiro Full Stack",
-    "subtitle": "Node.js · React · TypeScript · GCP · GenAI",
     "body": "Projeto e construo produtos digitais escaláveis — de APIs backend a infraestrutura em nuvem, de interfaces frontend a fluxos com inteligência artificial. Lidero equipes de desenvolvimento, defino arquitetura técnica e entrego soluções completas.",
     "ctaWork": "Ver Meu Trabalho",
     "ctaContact": "Entrar em Contato",
     "stats": {
-      "experience": "10+",
       "experienceLabel": "Anos de Experiência",
-      "projects": "15+",
       "projectsLabel": "Projetos Enterprise",
-      "teams": "3",
       "teamsLabel": "Idiomas"
     },
     "whatIBuild": "O Que Eu Construo",
     "skillCards": {
-      "frontend": {
-        "title": "Frontend",
-        "description": "React.js, TypeScript, JavaScript, HTML5, CSS, Sass, Tailwind CSS, Bootstrap"
-      },
       "backend": {
         "title": "Backend & APIs",
         "description": "Node.js, Fastify, TypeScript, REST APIs, PostgreSQL, Drizzle ORM"
-      },
-      "cloud": {
-        "title": "Cloud & DevOps",
-        "description": "GCP, Cloud Run, Cloud SQL, Docker, Azure DevOps, CI/CD"
       },
       "ai": {
         "title": "IA & GenAI",
@@ -65,12 +51,8 @@
     "paragraph4": "Além do stack, me preocupo com cultura de engenharia: escrever código sustentável, capacitar times a evoluir com confiança e construir coisas que realmente sejam úteis.",
     "ctaProjects": "Ver Projetos",
     "ctaExperience": "Ver Experiência",
-    "ctaLinkedIn": "LinkedIn",
     "techStack": "Stack Técnico",
     "skillTitles": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "cloud": "Cloud & DevOps",
       "ai": "IA & GenAI",
       "leadership": "Liderança",
       "other": "Outros"
@@ -106,7 +88,6 @@
     "originStory": "Onde Tudo Começou",
     "originCard": {
       "role": "Técnico de Suporte em TI",
-      "company": "Metrobyte",
       "period": "Fevereiro 2014 – Setembro 2015"
     },
     "originStoryDesc": "Onde tudo começou — hardware, software, infraestrutura de rede e resolução de problemas na prática. Essa base moldou uma mentalidade analítica e uma abordagem hands-on para resolução de problemas.",
@@ -118,7 +99,6 @@
     "items": {
       "rd-saude": {
         "title": "Tech Lead",
-        "company": "RD Saúde",
         "period": "Fevereiro 2025 – Presente",
         "description": "Liderando o escopo técnico de uma plataforma de conteúdo com GenAI, do design da arquitetura até o deploy em produção. Responsável por backend, frontend, infraestrutura em nuvem, pipelines de CI/CD, integrações de IA e orientação técnica ao time de desenvolvimento.",
         "highlights": [
@@ -132,7 +112,6 @@
       },
       "directv": {
         "title": "Roku Chapter Leader / Referência Técnica",
-        "company": "DIRECTV GO / VRIO",
         "period": "Fevereiro 2022 – Janeiro 2025",
         "description": "Liderei e apoiei a aplicação Roku na América Latina, garantindo estabilidade da plataforma, qualidade de releases e alinhamento técnico entre múltiplas equipes de desenvolvimento.",
         "highlights": [
@@ -157,7 +136,6 @@
       },
       "studio-visual": {
         "title": "Desenvolvedor Web",
-        "company": "Studio Visual",
         "period": "Setembro 2015 – Dezembro 2017",
         "description": "Desenvolvi sites e aplicações web com PHP, WordPress, HTML, CSS e JavaScript, da concepção do projeto até a entrega final.",
         "highlights": [
@@ -240,12 +218,7 @@
     "infoTitle": "Informações de Contato",
     "locationTitle": "Localização",
     "locationValue": "São Paulo, Brasil — Disponível remotamente",
-    "connectTitle": "Conectar",
-    "emailTitle": "E-mail",
-    "linkedinTitle": "LinkedIn",
-    "githubTitle": "GitHub",
-    "whatsappTitle": "WhatsApp",
-    "whatsappLabel": "+55 (11) 98856-4898",
+"emailTitle": "E-mail",
     "formTitle": "Envie uma Mensagem",
     "nameLabel": "Nome",
     "namePlaceholder": "Seu nome",

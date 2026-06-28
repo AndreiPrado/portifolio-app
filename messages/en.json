@@ -17,34 +17,20 @@
   },
   "Home": {
     "greeting": "Hi, I'm",
-    "name": "Andrei Prado",
-    "titleLine1": "Tech Lead &",
     "titleLine2": "Full Stack Engineer",
-    "subtitle": "Node.js · React · TypeScript · GCP · GenAI",
     "body": "I design and build scalable digital products — from backend APIs to cloud infrastructure, from frontend interfaces to AI-powered workflows. I lead development teams, define technical architecture and deliver end-to-end solutions.",
     "ctaWork": "See My Work",
     "ctaContact": "Get in Touch",
     "stats": {
-      "experience": "10+",
       "experienceLabel": "Years of Experience",
-      "projects": "15+",
       "projectsLabel": "Enterprise Projects",
-      "teams": "3",
       "teamsLabel": "Languages"
     },
     "whatIBuild": "What I Build",
     "skillCards": {
-      "frontend": {
-        "title": "Frontend",
-        "description": "React.js, TypeScript, JavaScript, HTML5, CSS, Sass, Tailwind CSS, Bootstrap"
-      },
       "backend": {
         "title": "Backend & APIs",
         "description": "Node.js, Fastify, TypeScript, REST APIs, PostgreSQL, Drizzle ORM"
-      },
-      "cloud": {
-        "title": "Cloud & DevOps",
-        "description": "GCP, Cloud Run, Cloud SQL, Docker, Azure DevOps, CI/CD"
       },
       "ai": {
         "title": "AI & GenAI",
@@ -65,12 +51,8 @@
     "paragraph4": "Beyond the stack, I care about engineering culture: writing maintainable code, enabling teams to move fast with confidence, and building things that are actually useful.",
     "ctaProjects": "View Projects",
     "ctaExperience": "See Experience",
-    "ctaLinkedIn": "LinkedIn",
     "techStack": "Tech Stack",
     "skillTitles": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "cloud": "Cloud & DevOps",
       "ai": "AI & GenAI",
       "leadership": "Leadership",
       "other": "Other"
@@ -106,7 +88,6 @@
     "originStory": "Origin Story",
     "originCard": {
       "role": "IT Support Technician",
-      "company": "Metrobyte",
       "period": "February 2014 – September 2015"
     },
     "originStoryDesc": "Where it all started — hardware, software, network infrastructure and hands-on troubleshooting. This foundation shaped an analytical mindset and a practical approach to problem solving.",
@@ -118,7 +99,6 @@
     "items": {
       "rd-saude": {
         "title": "Technical Lead",
-        "company": "RD Saúde",
         "period": "February 2025 – Present",
         "description": "Leading the technical scope of a GenAI-powered content platform, from architecture design to production deployment. Responsible for backend, frontend, cloud infrastructure, CI/CD pipelines, AI integrations and technical guidance for the development team.",
         "highlights": [
@@ -132,7 +112,6 @@
       },
       "directv": {
         "title": "Roku Chapter Leader / Technical Reference",
-        "company": "DIRECTV GO / VRIO",
         "period": "February 2022 – January 2025",
         "description": "Led and supported the Roku application across Latin America, ensuring platform stability, release quality and technical alignment across multiple development teams.",
         "highlights": [
@@ -157,7 +136,6 @@
       },
       "studio-visual": {
         "title": "Web Developer",
-        "company": "Studio Visual",
         "period": "September 2015 – December 2017",
         "description": "Developed websites and web applications using PHP, WordPress, HTML, CSS and JavaScript, from project conception to final delivery.",
         "highlights": [
@@ -240,12 +218,7 @@
     "infoTitle": "Contact Information",
     "locationTitle": "Location",
     "locationValue": "São Paulo, Brazil — Remote friendly",
-    "connectTitle": "Connect",
-    "emailTitle": "Email",
-    "linkedinTitle": "LinkedIn",
-    "githubTitle": "GitHub",
-    "whatsappTitle": "WhatsApp",
-    "whatsappLabel": "+55 (11) 98856-4898",
+"emailTitle": "Email",
     "formTitle": "Send a Message",
     "nameLabel": "Name",
     "namePlaceholder": "Your name",

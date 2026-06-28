@@ -77,7 +77,7 @@ export default async function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{t("linkedinTitle")}</h3>
+                  <h3 className="text-lg font-bold text-white mb-1">LinkedIn</h3>
                   <a
                     href="https://www.linkedin.com/in/andrei-prado"
                     target="_blank"
@@ -98,7 +98,7 @@ export default async function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{t("githubTitle")}</h3>
+                  <h3 className="text-lg font-bold text-white mb-1">GitHub</h3>
                   <a
                     href="https://github.com/AndreiPrado"
                     target="_blank"
@@ -118,14 +118,14 @@ export default async function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">{t("whatsappTitle")}</h3>
+                  <h3 className="text-lg font-bold text-white mb-1">WhatsApp</h3>
                   <a
                     href="https://wa.me/5511988564898"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                   >
-                    {t("whatsappLabel")}
+                    +55 (11) 98856-4898
                   </a>
                 </div>
               </div>
@@ -145,50 +145,6 @@ export default async function Contact() {
               </div>
             </div>
 
-            {/* Social links */}
-            <div className="mt-12">
-              <h3 className="text-lg font-bold text-white mb-4">{t("connectTitle")}</h3>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="https://www.linkedin.com/in/andrei-prado"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button-secondary flex items-center gap-2 w-full sm:w-auto"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect width="4" height="12" x="2" y="9" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                  {t("linkedinTitle")}
-                </a>
-
-                <a
-                  href="https://github.com/AndreiPrado"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button-secondary flex items-center gap-2 w-full sm:w-auto"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                    <path d="M9 18c-4.51 2-5-2-7-2" />
-                  </svg>
-                  {t("githubTitle")}
-                </a>
-
-                <a
-                  href="https://wa.me/5511988564898"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button-secondary flex items-center gap-2 w-full sm:w-auto"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                  {t("whatsappTitle")}
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
