@@ -106,7 +106,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-transparent backdrop-blur flex flex-col items-center justify-center z-40 transition-all duration-300 h-screen md:hidden ${isMobileMenuOpen ? "opacity-100" : "opacity-0"
+          className={`fixed inset-0 bg-transparent backdrop-blur flex flex-col items-center justify-center z-40 transition-all duration-300 h-screen md:hidden ${isMobileMenuOpen ? "opacity-100 pointer-events-auto visible" : "opacity-0 pointer-events-none invisible"
             }`}
         >
           <nav className="flex flex-col items-center gap-6 text-lg">
