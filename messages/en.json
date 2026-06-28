@@ -257,6 +257,9 @@
     "sending": "Sending...",
     "successTitle": "Message sent!",
     "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible.",
-    "errorMessage": "Something went wrong. Please try again or send an email directly."
+    "errorMessage": "Something went wrong. Please try again or send an email directly.",
+    "validationName": "Please enter your name (at least 2 characters).",
+    "validationEmail": "Please enter a valid email address.",
+    "validationMessage": "Please enter a message (at least 10 characters)."
   }
 }

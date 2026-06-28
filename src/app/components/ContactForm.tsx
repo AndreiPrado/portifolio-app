@@ -5,14 +5,28 @@ import { useLocale, useTranslations } from "next-intl";
 
 type Status = "idle" | "sending" | "success" | "error";
 
+type FieldErrors = {
+  name?: string;
+  email?: string;
+  message?: string;
+};
+
 export default function ContactForm() {
   const t = useTranslations("Contact");
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+
+  function validate(data: { name: string; email: string; message: string }): FieldErrors {
+    const errors: FieldErrors = {};
+    if (data.name.trim().length < 2) errors.name = t("validationName");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.email = t("validationEmail");
+    if (data.message.trim().length < 10) errors.message = t("validationMessage");
+    return errors;
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("sending");
 
     const form = e.currentTarget;
     const data = {
@@ -21,6 +35,15 @@ export default function ContactForm() {
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
       locale,
     };
+
+    const errors = validate(data);
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
+
+    setFieldErrors({});
+    setStatus("sending");
 
     try {
       const res = await fetch("/api/contact", {
@@ -65,11 +88,17 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
-          required
-          minLength={2}
-          className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
+          onChange={() => setFieldErrors((e) => ({ ...e, name: undefined }))}
+          className={`w-full bg-gray-800 border rounded-lg p-3 text-white transition ${
+            fieldErrors.name
+              ? "border-red-500 focus:border-red-500 focus:outline-none"
+              : "border-gray-700 focus:border-purple-500 focus:outline-none"
+          }`}
           placeholder={t("namePlaceholder")}
         />
+        {fieldErrors.name && (
+          <p className="mt-1 text-red-400 text-xs">{fieldErrors.name}</p>
+        )}
       </div>
 
       <div>
@@ -80,10 +109,17 @@ export default function ContactForm() {
           type="email"
           id="email"
           name="email"
-          required
-          className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
+          onChange={() => setFieldErrors((e) => ({ ...e, email: undefined }))}
+          className={`w-full bg-gray-800 border rounded-lg p-3 text-white transition ${
+            fieldErrors.email
+              ? "border-red-500 focus:border-red-500 focus:outline-none"
+              : "border-gray-700 focus:border-purple-500 focus:outline-none"
+          }`}
           placeholder={t("emailPlaceholder")}
         />
+        {fieldErrors.email && (
+          <p className="mt-1 text-red-400 text-xs">{fieldErrors.email}</p>
+        )}
       </div>
 
       <div>
@@ -94,11 +130,17 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={5}
-          required
-          minLength={10}
-          className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"
+          onChange={() => setFieldErrors((e) => ({ ...e, message: undefined }))}
+          className={`w-full bg-gray-800 border rounded-lg p-3 text-white transition ${
+            fieldErrors.message
+              ? "border-red-500 focus:border-red-500 focus:outline-none"
+              : "border-gray-700 focus:border-purple-500 focus:outline-none"
+          }`}
           placeholder={t("messagePlaceholder")}
         />
+        {fieldErrors.message && (
+          <p className="mt-1 text-red-400 text-xs">{fieldErrors.message}</p>
+        )}
       </div>
 
       {status === "error" && (

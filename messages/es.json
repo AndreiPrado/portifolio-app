@@ -257,6 +257,9 @@
     "sending": "Enviando...",
     "successTitle": "¡Mensaje enviado!",
     "successMessage": "Gracias por contactarme. Te responderé lo antes posible.",
-    "errorMessage": "Algo salió mal. Intenta de nuevo o envía un correo directamente."
+    "errorMessage": "Algo salió mal. Intenta de nuevo o envía un correo directamente.",
+    "validationName": "Por favor, ingresa tu nombre (mínimo 2 caracteres).",
+    "validationEmail": "Por favor, ingresa un correo válido.",
+    "validationMessage": "Por favor, escribe un mensaje (mínimo 10 caracteres)."
   }
 }

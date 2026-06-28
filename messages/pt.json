@@ -257,6 +257,9 @@
     "sending": "Enviando...",
     "successTitle": "Mensagem enviada!",
     "successMessage": "Obrigado pelo contato. Retornarei em breve.",
-    "errorMessage": "Algo deu errado. Tente novamente ou envie um e-mail diretamente."
+    "errorMessage": "Algo deu errado. Tente novamente ou envie um e-mail diretamente.",
+    "validationName": "Por favor, informe seu nome (mínimo 2 caracteres).",
+    "validationEmail": "Por favor, informe um e-mail válido.",
+    "validationMessage": "Por favor, escreva uma mensagem (mínimo 10 caracteres)."
   }
 }

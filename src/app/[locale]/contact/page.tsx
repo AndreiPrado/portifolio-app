@@ -59,10 +59,10 @@ export default async function Contact() {
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">{t("emailTitle")}</h3>
                   <a
-                    href="mailto:andrei.prado@hotmail.com"
+                    href="mailto:contato@andreiprado.com.br"
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                   >
-                    andrei.prado@hotmail.com
+                    contato@andreiprado.com.br
                   </a>
                 </div>
               </div>

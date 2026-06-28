@@ -53,7 +53,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:andrei.prado@hotmail.com"
+                href="mailto:contato@andreiprado.com.br"
                 className="text-white hover:text-purple-500 transition-colors"
                 aria-label="Email"
               >
@@ -88,8 +88,8 @@ export default function Footer() {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <a href="mailto:andrei.prado@hotmail.com" className="hover:text-white transition-colors">
-                  andrei.prado@hotmail.com
+                <a href="mailto:contato@andreiprado.com.br" className="hover:text-white transition-colors">
+                  contato@andreiprado.com.br
                 </a>
               </li>
               <li className="flex items-center gap-2">
