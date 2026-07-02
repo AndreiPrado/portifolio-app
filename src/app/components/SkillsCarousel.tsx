@@ -132,7 +132,7 @@ export default function SkillsCarousel({ titles }: Props) {
   useEffect(() => {
     if (paused) return;
     intervalRef.current = setInterval(goNext, 4500);
-    return () => clearInterval(intervalRef.current);
+    return () => clearInterval(intervalRef.current ?? undefined);
   }, [goNext, paused]);
 
   return (
