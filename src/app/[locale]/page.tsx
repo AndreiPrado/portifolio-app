@@ -1,6 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 import ScrollReveal from "../components/ScrollReveal";
+import AnimatedCounter from "../components/AnimatedCounter";
+import SkillsCarousel from "../components/SkillsCarousel";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
 
@@ -17,7 +20,7 @@ export default async function Home() {
   return (
     <div className="container mx-auto px-4">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex flex-col justify-center items-center text-center lg:text-left relative overflow-hidden">
+      <section className="min-h-[90vh] flex flex-col justify-center items-center text-center lg:text-left relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 right-10 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-1/4 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
@@ -55,15 +58,15 @@ export default async function Home() {
             <ScrollReveal delay={400} direction="up" distance="30px">
               <div className="mt-12 flex items-center gap-8">
                 <div>
-                  <h3 className="text-4xl font-bold text-white">10+</h3>
+                  <h3 className="text-4xl font-bold text-white"><AnimatedCounter target={10} suffix="+" /></h3>
                   <p className="text-gray-400 text-sm">{t("stats.experienceLabel")}</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-bold text-white">15+</h3>
+                  <h3 className="text-4xl font-bold text-white"><AnimatedCounter target={15} suffix="+" /></h3>
                   <p className="text-gray-400 text-sm">{t("stats.projectsLabel")}</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-bold text-white">3</h3>
+                  <h3 className="text-4xl font-bold text-white"><AnimatedCounter target={3} /></h3>
                   <p className="text-gray-400 text-sm">{t("stats.teamsLabel")}</p>
                 </div>
               </div>
@@ -72,25 +75,16 @@ export default async function Home() {
 
           <div className="lg:w-1/2 relative">
             <ScrollReveal delay={300} direction="right" distance="50px">
-              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] animate-float m-auto">
+              <div className="relative w-[300px] h-[380px] md:w-[400px] md:h-[480px] m-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-full blur-3xl"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-[400px] h-[400px] animate-float flex items-center justify-center bg-gradient-to-br from-purple-500/30 via-blue-500/20 to-pink-500/30 rounded-full">
-                    <div className="relative w-[300px] h-[300px] flex items-center justify-center">
-                      <div className="absolute w-[200px] h-[200px] rounded-full bg-gradient-to-b from-white/40 to-white/10 backdrop-blur-sm border border-white/30 flex items-center justify-center">
-                        <div className="w-[140px] h-[100px] rounded-full bg-gradient-to-br from-blue-400/30 via-purple-500/20 to-pink-400/30 border border-white/20"></div>
-                      </div>
-                      <div className="absolute top-[120px] w-[160px] h-[180px] bg-gradient-to-b from-white/30 to-gray-500/30 rounded-2xl border border-white/20">
-                        <div className="absolute top-[20px] left-[10px] w-[140px] h-[80px] bg-gray-800/40 rounded-lg border border-gray-600/30"></div>
-                      </div>
-                      <div className="absolute top-[140px] left-[10px] w-[30px] h-[100px] bg-white/20 rounded-full border border-white/10 rotate-[-20deg]"></div>
-                      <div className="absolute top-[140px] right-[10px] w-[30px] h-[100px] bg-white/20 rounded-full border border-white/10 rotate-[20deg]"></div>
-                    </div>
-                  </div>
-                </div>
+                <Image
+                  src="/profile_picture_updated.png"
+                  alt="Andrei Prado"
+                  fill
+                  className="object-contain object-bottom drop-shadow-2xl"
+                  priority
+                />
               </div>
-              <div className="absolute top-12 -right-10 w-20 h-20 rounded-full bg-purple-500/20 animate-pulse-slow"></div>
-              <div className="absolute -bottom-10 left-12 w-16 h-16 rounded-full bg-blue-500/20 animate-pulse-slow"></div>
             </ScrollReveal>
           </div>
         </div>
@@ -113,48 +107,14 @@ export default async function Home() {
 
         <div className="mt-4">
           <ScrollReveal delay={300} direction="up" distance="30px">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-              <div className="card p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
-                    <path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path>
-                  </svg>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Frontend</h4>
-                <p className="text-gray-300 text-sm">React.js, TypeScript, JavaScript, HTML5, CSS, Sass, Tailwind CSS, Bootstrap</p>
-              </div>
-
-              <div className="card p-6 hover:border-blue-500/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
-                    <path d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3Z"></path><path d="M10 17v-4"></path><path d="M14 17v-7"></path><path d="M5 10h14"></path>
-                  </svg>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.backend.title")}</h4>
-                <p className="text-gray-300 text-sm">{t("skillCards.backend.description")}</p>
-              </div>
-
-              <div className="card p-6 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500">
-                    <path d="m3.5 8.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 1.2a2 2 0 0 0-2 0L3.5 5.3a2 2 0 0 0 0 3.4Z"></path><path d="m3.5 14.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 7.2a2 2 0 0 0-2 0L3.5 11.3a2 2 0 0 0 0 3.4Z"></path><path d="m3.5 20.7 7.5 4.1a2 2 0 0 0 2 0l7.5-4.1a2 2 0 0 0 0-3.4L13 13.2a2 2 0 0 0-2 0l-7.5 4.1a2 2 0 0 0 0 3.4Z"></path>
-                  </svg>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Cloud & DevOps</h4>
-                <p className="text-gray-300 text-sm">GCP, Cloud Run, Cloud SQL, Docker, Azure DevOps, CI/CD</p>
-              </div>
-
-              <div className="card p-6 hover:border-pink-500/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-500">
-                    <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 9.7"></path><path d="M12 12V2"></path>
-                  </svg>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">{t("skillCards.ai.title")}</h4>
-                <p className="text-gray-300 text-sm">{t("skillCards.ai.description")}</p>
-              </div>
-            </div>
-
+            <SkillsCarousel
+              titles={[
+                "Frontend",
+                t("skillCards.backend.title"),
+                "Cloud & DevOps",
+                t("skillCards.ai.title"),
+              ]}
+            />
             <div className="text-center mt-10">
               <Link href="/about" className="button-secondary">
                 {t("viewFullStack")}

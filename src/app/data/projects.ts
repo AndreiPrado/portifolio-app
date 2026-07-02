@@ -4,6 +4,7 @@ export interface ProjectData {
   gradientFrom: string;
   gradientTo: string;
   label: string;
+  imageUrl?: string;
   githubUrl?: string;
   projectUrl?: string;
 }
@@ -36,5 +37,7 @@ export const projects: ProjectData[] = [
     gradientFrom: "from-orange-500/30",
     gradientTo: "to-yellow-500/30",
     label: "SaaS",
+    imageUrl: "/projects/zele/preview.png",
+    projectUrl: "https://zelechurch.com.br/",
   },
 ];

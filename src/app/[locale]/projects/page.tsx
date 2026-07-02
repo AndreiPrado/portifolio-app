@@ -51,6 +51,7 @@ export default async function Projects() {
               <ProjectCard
                 title={project.title}
                 description={project.description}
+                imageUrl={project.imageUrl}
                 gradientFrom={project.gradientFrom}
                 gradientTo={project.gradientTo}
                 label={project.label}
