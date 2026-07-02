@@ -46,7 +46,7 @@ export default async function Home() {
 
             <ScrollReveal delay={300} direction="up" distance="30px">
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/projects" className="button-primary">
+                <Link href="/about" className="button-primary">
                   {t("ctaWork")}
                 </Link>
                 <Link href="/contact" className="button-secondary">
@@ -116,7 +116,7 @@ export default async function Home() {
               ]}
             />
             <div className="text-center mt-10">
-              <Link href="/about" className="button-secondary">
+              <Link href="/about#tech-stack" className="button-secondary">
                 {t("viewFullStack")}
               </Link>
             </div>
@@ -139,6 +139,7 @@ export default async function Home() {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
+                  imageUrl={project.imageUrl}
                   gradientFrom={project.gradientFrom}
                   gradientTo={project.gradientTo}
                   label={project.label}

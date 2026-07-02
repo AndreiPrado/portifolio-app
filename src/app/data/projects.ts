@@ -11,6 +11,15 @@ export interface ProjectData {
 
 export const projects: ProjectData[] = [
   {
+    id: "zele",
+    skills: ["Node.js", "Fastify", "TypeScript", "React", "Vite", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
+    gradientFrom: "from-orange-500/30",
+    gradientTo: "to-yellow-500/30",
+    label: "SaaS",
+    imageUrl: "/projects/zele/preview.png",
+    projectUrl: "https://zelechurch.com.br/",
+  },
+  {
     id: "genai-platform",
     skills: ["Node.js", "TypeScript", "Fastify", "React.js", "GCP", "Azure DevOps", "Docker", "OpenAI", "Gemini"],
     gradientFrom: "from-purple-500/30",
@@ -30,14 +39,5 @@ export const projects: ProjectData[] = [
     gradientFrom: "from-green-500/30",
     gradientTo: "to-teal-500/30",
     label: "Web",
-  },
-  {
-    id: "zele",
-    skills: ["Node.js", "Fastify", "TypeScript", "React", "Vite", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
-    gradientFrom: "from-orange-500/30",
-    gradientTo: "to-yellow-500/30",
-    label: "SaaS",
-    imageUrl: "/projects/zele/preview.png",
-    projectUrl: "https://zelechurch.com.br/",
   },
 ];

@@ -19,14 +19,14 @@
     "greeting": "Hola, soy",
     "titleLine2": "Ingeniero Full Stack",
     "body": "Diseño y construyo productos digitales escalables — desde APIs backend hasta infraestructura en la nube, desde interfaces frontend hasta flujos con inteligencia artificial. Lidero equipos de desarrollo, defino arquitectura técnica y entrego soluciones completas.",
-    "ctaWork": "Ver Proyectos",
+    "ctaWork": "Sobre Mí",
     "ctaContact": "Contactar",
     "stats": {
       "experienceLabel": "Años de Experiencia",
       "projectsLabel": "Proyectos Enterprise",
       "teamsLabel": "Idiomas"
     },
-    "whatIBuild": "Lo Que Construyo",
+    "whatIBuild": "Mi Stack",
     "skillCards": {
       "backend": {
         "title": "Backend y APIs",

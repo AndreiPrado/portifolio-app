@@ -45,7 +45,7 @@ export default async function Projects() {
           </ParallaxSection>
         </div>
 
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {items.map((project) => (
             <div key={project.id}>
               <ProjectCard

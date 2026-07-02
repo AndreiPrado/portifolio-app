@@ -19,14 +19,14 @@
     "greeting": "Hi, I'm",
     "titleLine2": "Full Stack Engineer",
     "body": "I design and build scalable digital products — from backend APIs to cloud infrastructure, from frontend interfaces to AI-powered workflows. I lead development teams, define technical architecture and deliver end-to-end solutions.",
-    "ctaWork": "See My Work",
+    "ctaWork": "About Me",
     "ctaContact": "Get in Touch",
     "stats": {
       "experienceLabel": "Years of Experience",
       "projectsLabel": "Enterprise Projects",
       "teamsLabel": "Languages"
     },
-    "whatIBuild": "What I Build",
+    "whatIBuild": "My Stack",
     "skillCards": {
       "backend": {
         "title": "Backend & APIs",

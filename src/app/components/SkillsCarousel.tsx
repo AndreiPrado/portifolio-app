@@ -71,6 +71,7 @@ export default function SkillsCarousel({ titles }: Props) {
   const [paused, setPaused] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const isAnimating = useRef(false);
 
   const activeIndex =
     displayIndex === 0 ? COUNT - 1
@@ -78,16 +79,22 @@ export default function SkillsCarousel({ titles }: Props) {
     : displayIndex - 1;
 
   const goNext = useCallback(() => {
+    if (isAnimating.current) return;
+    isAnimating.current = true;
     setAnimated(true);
     setDisplayIndex((p) => p + 1);
   }, []);
 
   const goPrev = useCallback(() => {
+    if (isAnimating.current) return;
+    isAnimating.current = true;
     setAnimated(true);
     setDisplayIndex((p) => p - 1);
   }, []);
 
   const goTo = useCallback((idx: number) => {
+    if (isAnimating.current) return;
+    isAnimating.current = true;
     setAnimated(true);
     setDisplayIndex(idx + 1);
   }, []);
@@ -104,16 +111,21 @@ export default function SkillsCarousel({ titles }: Props) {
       } else if (displayIndex === 0) {
         setAnimated(false);
         setDisplayIndex(COUNT);
+      } else {
+        isAnimating.current = false;
       }
     };
     el.addEventListener("transitionend", onEnd);
     return () => el.removeEventListener("transitionend", onEnd);
   }, [displayIndex]);
 
-  // Re-enable animation on the frame after the silent snap
+  // Re-enable animation on the frame after the silent snap, then unlock navigation
   useEffect(() => {
     if (animated) return;
-    const id = requestAnimationFrame(() => setAnimated(true));
+    const id = requestAnimationFrame(() => {
+      setAnimated(true);
+      isAnimating.current = false;
+    });
     return () => cancelAnimationFrame(id);
   }, [animated]);
 

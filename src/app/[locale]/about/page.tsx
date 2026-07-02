@@ -33,7 +33,7 @@ export default async function About() {
 
         <div className="relative z-10 flex flex-col md:flex-row gap-8">
           <div className="md:w-1/3">
-            <div className="rounded-xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 p-1">
+            <div className="rounded-xl overflow-hidden p-1">
               <div className="rounded-lg overflow-hidden aspect-square">
                 <Image
                   src="/profile_picture.jpeg"
@@ -84,7 +84,7 @@ export default async function About() {
       </section>
 
       {/* Skills Section */}
-      <section className="mb-20">
+      <section id="tech-stack" className="mb-20 scroll-mt-28">
         <div className="text-center mb-12">
           <h2 className="heading-md mb-4 text-white">{t("techStack")}</h2>
         </div>

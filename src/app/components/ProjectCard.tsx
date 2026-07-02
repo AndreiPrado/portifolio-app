@@ -31,7 +31,7 @@ export default function ProjectCard({
 
   return (
     <div
-      className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+      className="card overflow-hidden group relative transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 flex flex-col h-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -53,7 +53,7 @@ export default function ProjectCard({
         <div className="absolute inset-0 bg-gradient-to-t from-space-black via-transparent to-transparent"></div>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
         <p className="text-gray-300 mb-4">{description}</p>
 
@@ -65,7 +65,7 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-4 mt-auto pt-4">
           {projectUrl && (
             <Link href={projectUrl} className="button-primary text-sm">
               View Project
