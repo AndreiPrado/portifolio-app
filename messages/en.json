@@ -75,9 +75,18 @@
     "degree": "Bachelor's Degree in Information Systems",
     "university": "Universidade Paulista (UNIP) — São Paulo, Brazil",
     "languages": [
-      { "name": "Portuguese", "level": "Native" },
-      { "name": "English", "level": "Advanced (B2/C1)" },
-      { "name": "Spanish", "level": "Intermediate" }
+      {
+        "name": "Portuguese",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Advanced (B2/C1)"
+      },
+      {
+        "name": "Spanish",
+        "level": "Intermediate"
+      }
     ],
     "ctaContact": "Contact Me"
   },
@@ -217,8 +226,8 @@
     "available": "Let's talk",
     "infoTitle": "Contact Information",
     "locationTitle": "Location",
-    "locationValue": "São Paulo, Brazil — Remote friendly",
-"emailTitle": "Email",
+    "locationValue": "São Paulo, Brazil",
+    "emailTitle": "Email",
     "formTitle": "Send a Message",
     "nameLabel": "Name",
     "namePlaceholder": "Your name",

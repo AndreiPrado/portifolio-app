@@ -75,9 +75,18 @@
     "degree": "Bacharelado em Sistemas de Informação",
     "university": "Universidade Paulista (UNIP) — São Paulo, Brasil",
     "languages": [
-      { "name": "Português", "level": "Nativo" },
-      { "name": "Inglês", "level": "Avançado (B2/C1)" },
-      { "name": "Espanhol", "level": "Intermediário" }
+      {
+        "name": "Português",
+        "level": "Nativo"
+      },
+      {
+        "name": "Inglês",
+        "level": "Avançado (B2/C1)"
+      },
+      {
+        "name": "Espanhol",
+        "level": "Intermediário"
+      }
     ],
     "ctaContact": "Entre em Contato"
   },
@@ -217,8 +226,8 @@
     "available": "Vamos conversar",
     "infoTitle": "Informações de Contato",
     "locationTitle": "Localização",
-    "locationValue": "São Paulo, Brasil — Disponível remotamente",
-"emailTitle": "E-mail",
+    "locationValue": "São Paulo, Brasil",
+    "emailTitle": "E-mail",
     "formTitle": "Envie uma Mensagem",
     "nameLabel": "Nome",
     "namePlaceholder": "Seu nome",

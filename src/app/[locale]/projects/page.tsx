@@ -27,12 +27,10 @@ export default async function Projects() {
           </DirectionalParallax>
         </div>
         <div className="relative z-10">
-          <DirectionalParallax speed={3}>
             <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
             <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
               {t("subtitle")}
             </p>
-          </DirectionalParallax>
         </div>
       </section>
 
@@ -47,31 +45,21 @@ export default async function Projects() {
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {items.map((project) => (
-            <div key={project.id}>
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                imageUrl={project.imageUrl}
-                gradientFrom={project.gradientFrom}
-                gradientTo={project.gradientTo}
-                label={project.label}
-                tags={project.skills}
-                projectUrl={project.projectUrl}
-                githubUrl={project.githubUrl}
-              />
-              <div className="mt-2 px-1">
-                <span className="text-xs text-gray-500">{t("roleLabel")}: </span>
-                <span className="text-xs text-gray-400">{project.role}</span>
-              </div>
-              <ul className="mt-3 px-1 space-y-1">
-                {project.highlights.map((item, i) => (
-                  <li key={i} className="text-xs text-gray-500 flex items-start gap-2">
-                    <span className="text-purple-600 mt-0.5 shrink-0">▸</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imageUrl={project.imageUrl}
+              gradientFrom={project.gradientFrom}
+              gradientTo={project.gradientTo}
+              label={project.label}
+              tags={project.skills}
+              projectUrl={project.projectUrl}
+              githubUrl={project.githubUrl}
+              role={project.role}
+              highlights={project.highlights}
+              roleLabel={t("roleLabel")}
+            />
           ))}
         </div>
       </section>

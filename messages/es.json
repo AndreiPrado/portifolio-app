@@ -75,9 +75,18 @@
     "degree": "Licenciatura en Sistemas de Información",
     "university": "Universidade Paulista (UNIP) — São Paulo, Brasil",
     "languages": [
-      { "name": "Portugués", "level": "Nativo" },
-      { "name": "Inglés", "level": "Avanzado (B2/C1)" },
-      { "name": "Español", "level": "Intermedio" }
+      {
+        "name": "Portugués",
+        "level": "Nativo"
+      },
+      {
+        "name": "Inglés",
+        "level": "Avanzado (B2/C1)"
+      },
+      {
+        "name": "Español",
+        "level": "Intermedio"
+      }
     ],
     "ctaContact": "Contactar"
   },
@@ -217,8 +226,8 @@
     "available": "Hablemos",
     "infoTitle": "Información de Contacto",
     "locationTitle": "Ubicación",
-    "locationValue": "São Paulo, Brasil — Disponible remotamente",
-"emailTitle": "Correo",
+    "locationValue": "São Paulo, Brasil",
+    "emailTitle": "Correo",
     "formTitle": "Enviar un Mensaje",
     "nameLabel": "Nombre",
     "namePlaceholder": "Tu nombre",

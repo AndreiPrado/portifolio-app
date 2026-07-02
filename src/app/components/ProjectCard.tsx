@@ -14,6 +14,9 @@ interface ProjectCardProps {
   tags: string[];
   projectUrl?: string;
   githubUrl?: string;
+  role?: string;
+  highlights?: string[];
+  roleLabel?: string;
 }
 
 export default function ProjectCard({
@@ -26,6 +29,9 @@ export default function ProjectCard({
   tags,
   projectUrl,
   githubUrl,
+  role,
+  highlights,
+  roleLabel = "Role",
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -96,6 +102,26 @@ export default function ProjectCard({
             </Link>
           )}
         </div>
+
+        {(role || (highlights && highlights.length > 0)) && (
+          <div className="mt-6 pt-5 border-t border-white/10">
+            {role && (
+              <p className="text-xs text-gray-500 mb-3">
+                <span className="text-gray-400 font-medium">{roleLabel}:</span> {role}
+              </p>
+            )}
+            {highlights && highlights.length > 0 && (
+              <ul className="space-y-1.5">
+                {highlights.map((item, i) => (
+                  <li key={i} className="text-xs text-gray-400 flex items-start gap-2">
+                    <span className="text-purple-500 mt-0.5 shrink-0">▸</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
