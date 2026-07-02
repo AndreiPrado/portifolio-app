@@ -70,7 +70,7 @@ export default function SkillsCarousel({ titles }: Props) {
   const [animated, setAnimated] = useState(true);
   const [paused, setPaused] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const isAnimating = useRef(false);
 
   const activeIndex =
