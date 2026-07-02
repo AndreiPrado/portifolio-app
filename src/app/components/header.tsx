@@ -47,17 +47,17 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center md:mr-6 lg:mr-0">
               <span className="text-white font-bold text-xl">A</span>
             </div>
-            <span className="text-white font-bold text-xl">
+            <span className="text-white font-bold text-xl md:hidden lg:block">
               Andrei <span className="text-purple-500">Prado</span>
             </span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center md:gap-4 lg:gap-8">
           {navHrefs.map(({ href, key }) => (
             <Link
               key={href}
@@ -85,7 +85,7 @@ export default function Header() {
 
           <a
             href="/CV_Andrei_Prado.pdf"
-            className="button-primary ml-2"
+            className="button-primary ml-2 md:text-xs md:p-3"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -109,7 +109,7 @@ export default function Header() {
           className={`fixed inset-0 bg-transparent backdrop-blur flex flex-col items-center justify-center z-40 transition-all duration-300 h-screen md:hidden ${isMobileMenuOpen ? "opacity-100 pointer-events-auto visible" : "opacity-0 pointer-events-none invisible"
             }`}
         >
-          <nav className="flex flex-col items-center gap-6 text-lg">
+          <nav className="flex flex-col items-center gap-6 text-md">
             {navHrefs.map(({ href, key }) => (
               <Link
                 key={href}
@@ -140,7 +140,7 @@ export default function Header() {
 
             <a
               href="/CV_Andrei_Prado.pdf"
-              className="button-primary mt-4"
+              className="button-primary mt-4 text-sm px-6 py-3"
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobileMenu}

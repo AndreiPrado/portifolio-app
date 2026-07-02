@@ -58,15 +58,17 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <div lang={locale} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <NextIntlClientProvider messages={messages}>
-        <ParallaxProviderWrapper>
-          <StarBackground />
-          <Header />
-          <main className="min-h-screen pt-24">{children}</main>
-          <Footer />
-        </ParallaxProviderWrapper>
-      </NextIntlClientProvider>
-    </div>
+    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <ParallaxProviderWrapper>
+            <StarBackground />
+            <Header />
+            <main className="min-h-screen pt-24">{children}</main>
+            <Footer />
+          </ParallaxProviderWrapper>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
