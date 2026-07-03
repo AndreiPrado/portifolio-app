@@ -9,159 +9,169 @@ export default async function About() {
   const languages = t.raw("languages") as { name: string; level: string }[];
 
   return (
-    <div className="container mx-auto px-4">
-      {/* Page Header */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
-        </div>
-        <div className="relative z-10">
-          <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
-          <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
-            {t("subtitle")}
-          </p>
-        </div>
-      </section>
-
-      {/* Profile Section */}
-      <section className="mb-20 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-20 w-72 h-72 bg-purple-500/5 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div className="relative z-10 flex flex-col md:flex-row gap-8">
-          <div className="md:w-1/3">
-            <div className="rounded-xl overflow-hidden p-1">
-              <div className="rounded-lg overflow-hidden aspect-square">
-                <Image
-                  src="/profile_picture.jpeg"
-                  alt="Andrei Prado"
-                  width={500}
-                  height={500}
-                  className="w-full h-full object-contain"
-                  priority
-                />
-              </div>
-            </div>
+    <div>
+      <div className="container mx-auto px-4">
+        {/* Page Header */}
+        <section className="py-16 relative">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
+            <div className="absolute bottom-0 left-12 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl"></div>
           </div>
-
-          <div className="md:w-2/3">
-            <h2 className="heading-md mb-6 text-white">
-              {t("bioGreeting")}{" "}
-              <span className="text-purple-400">Andrei Prado</span>
-            </h2>
-
-            <p className="body-text mb-4 text-gray-300">{t("paragraph1")}</p>
-            <p className="body-text mb-4 text-gray-300">{t("paragraph2")}</p>
-            <p className="body-text mb-4 text-gray-300">{t("paragraph3")}</p>
-            <p className="body-text mb-4 text-gray-300">{t("paragraph4")}</p>
-
-            <div className="flex flex-wrap gap-4 mt-8">
-              <Link href="/projects" className="button-primary">
-                {t("ctaProjects")}
-              </Link>
-              <Link href="/experience" className="button-secondary">
-                {t("ctaExperience")}
-              </Link>
-              <a
-                href="https://www.linkedin.com/in/andrei-prado"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-secondary flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-                LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="tech-stack" className="mb-20 scroll-mt-28">
-        <div className="text-center mb-12">
-          <h2 className="heading-md mb-4 text-white">{t("techStack")}</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {skillCategories.map((category) => (
-            <div
-              key={category.id}
-              className={`card p-6 transition-all duration-300 ${category.borderHover}`}
-            >
-              <h3 className={`text-lg font-bold mb-4 ${category.accentColor}`}>
-                {category.title ?? t(`skillTitles.${category.id}`)}
-              </h3>
-              <ul className="space-y-2">
-                {category.skills.map((skill) => (
-                  <li key={skill} className="text-gray-300 text-sm flex items-center gap-2">
-                    <span className={`w-1.5 h-1.5 rounded-full ${category.bgColor.replace("10", "60")}`}></span>
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Leadership Section */}
-      <section className="mb-20 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="heading-md mb-4 text-white">{t("leadershipTitle")}</h2>
-            <p className="body-text text-gray-300 max-w-3xl mx-auto">
-              {t("leadershipSubtitle")}
+          <div className="relative z-10">
+            <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
+            <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
+              {t("subtitle")}
             </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {highlights.map((item, i) => (
+        {/* Profile Section */}
+        <section className="mb-20 relative">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/3 left-20 w-72 h-72 bg-purple-500/5 rounded-full filter blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+          </div>
+
+          <div className="relative z-10 flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/3">
+              <div className="rounded-xl overflow-hidden p-1">
+                <div className="rounded-lg overflow-hidden aspect-square">
+                  <Image
+                    src="/profile_picture.jpeg"
+                    alt="Andrei Prado"
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-contain"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="md:w-2/3">
+              <h2 className="heading-md mb-6 text-white">
+                {t("bioGreeting")}{" "}
+                <span className="text-purple-400">Andrei Prado</span>
+              </h2>
+
+              <p className="body-text mb-4 text-gray-300">{t("paragraph1")}</p>
+              <p className="body-text mb-4 text-gray-300">{t("paragraph2")}</p>
+              <p className="body-text mb-4 text-gray-300">{t("paragraph3")}</p>
+              <p className="body-text mb-4 text-gray-300">{t("paragraph4")}</p>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                <Link href="/projects" className="button-primary">
+                  {t("ctaProjects")}
+                </Link>
+                <Link href="/experience" className="button-secondary">
+                  {t("ctaExperience")}
+                </Link>
+                <a
+                  href="https://www.linkedin.com/in/andrei-prado"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-secondary flex items-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="container-fluid mx-auto">
+        {/* Leadership Section — full-bleed strip */}
+        <section className="mb-20 relative py-16" style={{ boxShadow: "rgb(59 7 100 / 0.8) 0px 0px 12px 20px" }}>
+          <div className="absolute inset-0 bg-gradient-to-b from-purple-950/80 via-blue-950/60 to-purple-950/80" />
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-blue-500/8 rounded-full blur-3xl" />
+          </div>
+
+          <div className="relative z-10 container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="heading-md mb-4 text-gradient">{t("leadershipTitle")}</h2>
+              <p className="body-text text-gray-300 max-w-2xl mx-auto">
+                {t("leadershipSubtitle")}
+              </p>
+            </div>
+
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mx-auto">
+              {highlights.map((item, i) => (
+                <li key={i} className="flex items-start gap-4">
+                  <span className="mt-0.5 shrink-0 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-200 text-sm leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div className="container mx-auto px-4">
+        {/* Skills Section */}
+        <section id="tech-stack" className="mb-20 scroll-mt-28">
+          <div className="text-center mb-12">
+            <h2 className="heading-md mb-4 text-white">{t("techStack")}</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+            {skillCategories.map((category) => (
               <div
-                key={i}
-                className="card p-4 text-center hover:border-purple-500/40 transition-all duration-300"
+                key={category.id}
+                className={`card p-6 transition-all duration-300 ${category.borderHover}`}
               >
-                <span className="text-gray-200 text-sm font-medium">{item}</span>
+                <h3 className={`text-lg font-bold mb-4 ${category.accentColor}`}>
+                  {category.title ?? t(`skillTitles.${category.id}`)}
+                </h3>
+                <ul className="space-y-2">
+                  {category.skills.map((skill) => (
+                    <li key={skill} className="text-gray-300 text-sm flex items-center gap-2">
+                      <span className={`w-1.5 h-1.5 rounded-full ${category.bgColor.replace("10", "60")}`}></span>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Education & Languages */}
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="heading-md mb-4 text-white">{t("educationTitle")}</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          <div className="card p-6">
-            <h3 className="text-lg font-bold text-white mb-4">{t("educationCardTitle")}</h3>
-            <h4 className="text-purple-400 font-semibold mb-1">{t("degree")}</h4>
-            <p className="text-gray-300 text-sm">{t("university")}</p>
+        {/* Education & Languages */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="heading-md mb-4 text-white">{t("educationTitle")}</h2>
           </div>
 
-          <div className="card p-6">
-            <h3 className="text-lg font-bold text-white mb-4">{t("languagesCardTitle")}</h3>
-            {languages.map((lang) => (
-              <p key={lang.name} className="text-gray-300 text-sm mb-2">
-                <span className="text-white font-medium">{lang.name}</span>
-                <span className="text-gray-400"> — {lang.level}</span>
-              </p>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+            <div className="card p-6">
+              <h3 className="text-lg font-bold text-white mb-4">{t("educationCardTitle")}</h3>
+              <h4 className="text-purple-400 font-semibold mb-1">{t("degree")}</h4>
+              <p className="text-gray-300 text-sm">{t("university")}</p>
+            </div>
+
+            <div className="card p-6">
+              <h3 className="text-lg font-bold text-white mb-4">{t("languagesCardTitle")}</h3>
+              {languages.map((lang) => (
+                <p key={lang.name} className="text-gray-300 text-sm mb-2">
+                  <span className="text-white font-medium">{lang.name}</span>
+                  <span className="text-gray-400"> — {lang.level}</span>
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

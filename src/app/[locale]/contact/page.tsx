@@ -36,7 +36,7 @@ export default async function Contact() {
           <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
         </div>
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Contact Form */}
           <div>
             <h2 className="heading-md mb-8 text-white">{t("formTitle")}</h2>

@@ -27,10 +27,10 @@ export default async function Projects() {
           </DirectionalParallax>
         </div>
         <div className="relative z-10">
-            <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
-            <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
-              {t("subtitle")}
-            </p>
+          <h1 className="heading-lg text-center mb-6 text-gradient">{t("title")}</h1>
+          <p className="body-text text-gray-300 text-center max-w-3xl mx-auto mb-12">
+            {t("subtitle")}
+          </p>
         </div>
       </section>
 
@@ -43,7 +43,7 @@ export default async function Projects() {
           </ParallaxSection>
         </div>
 
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {items.map((project) => (
             <ProjectCard
               key={project.id}
@@ -65,7 +65,7 @@ export default async function Projects() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 text-center relative overflow-hidden">
+      <section className="py-16 text-center relative">
         <div className="absolute inset-0 pointer-events-none">
           <ParallaxSection speed={0.15}>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full filter blur-3xl"></div>
