@@ -12,6 +12,26 @@ const schema = z.object({
   locale: z.enum(["en", "pt", "es"]).default("en"),
 });
 
+const RATE_LIMIT = 5;
+const WINDOW_MS = 60 * 60 * 1000; // 1 hora
+
+const ipHits = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = ipHits.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    ipHits.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+    return false;
+  }
+
+  if (entry.count >= RATE_LIMIT) return true;
+
+  entry.count++;
+  return false;
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
   if (!body) {
@@ -24,7 +44,11 @@ export async function POST(req: NextRequest) {
   }
 
   const { name, email, message, locale } = parsed.data;
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0] ?? req.headers.get("x-real-ip") ?? null;
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0] ?? req.headers.get("x-real-ip") ?? "unknown";
+
+  if (isRateLimited(ip)) {
+    return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+  }
 
   // Salva no banco antes de tentar enviar (garante que nenhuma mensagem é perdida)
   const [row] = await db

@@ -2,6 +2,10 @@ import { Resend } from "resend";
 
 const FROM = process.env.CONTACT_FROM!;
 
+function escapeHtml(s: string) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
 type Locale = "en" | "pt" | "es";
 
 function getResend() {
@@ -63,11 +67,11 @@ export async function sendContactNotification(data: {
     subject: t.subject(data.name),
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-        <p><strong>${t.labelName}:</strong> ${data.name}</p>
-        <p><strong>${t.labelEmail}:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+        <p><strong>${t.labelName}:</strong> ${escapeHtml(data.name)}</p>
+        <p><strong>${t.labelEmail}:</strong> <a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></p>
         <p><strong>${t.labelMessage}:</strong></p>
         <blockquote style="border-left: 3px solid #7c3aed; padding-left: 12px; color: #374151;">
-          ${data.message.replace(/\n/g, "<br>")}
+          ${escapeHtml(data.message).replace(/\n/g, "<br>")}
         </blockquote>
       </div>
     `,
@@ -87,7 +91,7 @@ export async function sendContactConfirmation(data: {
     subject: t.subject,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #7c3aed;">${t.greeting(data.name)}</h2>
+        <h2 style="color: #7c3aed;">${t.greeting(escapeHtml(data.name))}</h2>
         <p>${t.body}</p>
       </div>
     `,
