@@ -98,7 +98,7 @@ Routes are prefixed with the locale (`/en`, `/pt`, `/es`). The default locale is
 
 ## Deployment
 
-Optimized for [Vercel](https://vercel.com). Set the environment variables listed above in the project settings before deploying.
+Hosted on [Railway](https://railway.app). Set the environment variables listed above in the project settings before deploying.
 
 ## License
 
