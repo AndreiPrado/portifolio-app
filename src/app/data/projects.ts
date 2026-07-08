@@ -18,6 +18,7 @@ export const projects: ProjectData[] = [
     label: "SaaS",
     imageUrl: "/projects/zele/preview.png",
     projectUrl: "https://zelechurch.com.br/",
+    githubUrl: "https://github.com/AndreiPrado/church-app-frontend",
   },
   {
     id: "genai-platform",
