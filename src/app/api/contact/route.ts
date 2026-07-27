@@ -14,14 +14,27 @@ const schema = z.object({
 
 const RATE_LIMIT = 5;
 const WINDOW_MS = 60 * 60 * 1000; // 1 hora
+const MAX_IPS = 5_000;
+const CLEANUP_INTERVAL_MS = 10 * 60 * 1000; // 10 minutos
 
 const ipHits = new Map<string, { count: number; resetAt: number }>();
+
+function pruneExpiredEntries() {
+  const now = Date.now();
+  for (const [ip, entry] of ipHits) {
+    if (now > entry.resetAt) ipHits.delete(ip);
+  }
+}
+
+setInterval(pruneExpiredEntries, CLEANUP_INTERVAL_MS);
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
   const entry = ipHits.get(ip);
 
   if (!entry || now > entry.resetAt) {
+    // Evita crescimento ilimitado: limpa entradas expiradas antes de inserir novo IP
+    if (ipHits.size >= MAX_IPS) pruneExpiredEntries();
     ipHits.set(ip, { count: 1, resetAt: now + WINDOW_MS });
     return false;
   }

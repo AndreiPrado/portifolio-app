@@ -216,6 +216,20 @@
           "Implementação de frontend com React e Tailwind CSS",
           "Deploy no Railway com PostgreSQL"
         ]
+      },
+      "email-archive": {
+        "title": "Email Archive CLI",
+        "type": "Projeto Pessoal / CLI / Backend",
+        "description": "Ferramenta CLI para arquivar e-mails do Microsoft Outlook por ano usando a Microsoft Graph API. Criada para organizar caixas de entrada com milhares de e-mails — com dry-run, processamento em lote e rastreamento de estado via SQLite.",
+        "role": "Criador / Desenvolvedor",
+        "highlights": [
+          "Microsoft Graph API com OAuth 2.0 Device Code Flow",
+          "Batch API — move até 20 e-mails por requisição",
+          "Throttling com backoff exponencial",
+          "Rastreamento de estado via SQLite para execuções idempotentes e retomáveis",
+          "Modo dry-run e opções flexíveis de CLI",
+          "Não-destrutiva — nunca exclui, apenas move entre pastas"
+        ]
       }
     }
   },

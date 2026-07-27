@@ -11,6 +11,14 @@ export interface ProjectData {
 
 export const projects: ProjectData[] = [
   {
+    id: "email-archive",
+    skills: ["Node.js", "TypeScript", "Microsoft Graph API", "SQLite", "OAuth 2.0", "Vitest"],
+    gradientFrom: "from-sky-500/30",
+    gradientTo: "to-indigo-500/30",
+    label: "CLI",
+    githubUrl: "https://github.com/AndreiPrado/email-archive",
+  },
+  {
     id: "zele",
     skills: ["Node.js", "Fastify", "TypeScript", "React", "Vite", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
     gradientFrom: "from-orange-500/30",
