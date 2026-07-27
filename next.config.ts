@@ -2,8 +2,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
 
-const nextConfig = {
-  output: "standalone" as const,
-};
+const nextConfig = {};
 
 export default withNextIntl(nextConfig);
